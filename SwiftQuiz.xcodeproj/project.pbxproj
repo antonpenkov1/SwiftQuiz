@@ -39,10 +39,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2C58E452B51BEAB00B0156F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4E01D3932B52487100A00488 /* Data.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D2C58E462B51BED400B0156F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2F88FA92B50577D00303D0A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D2C58E472B51BEE400B0156F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D2F88FA52B50577D00303D0A /* AppDelegate.swift */,
+				D2F88FA72B50577D00303D0A /* SceneDelegate.swift */,
+				D2F88FB32B50577E00303D0A /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D2C58E482B51BEFB00B0156F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D2F88FAB2B50577D00303D0A /* Main.storyboard */,
+				D2F88FB02B50577E00303D0A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D2C58E492B51BF0600B0156F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D2F88F992B50577D00303D0A = {
 			isa = PBXGroup;
 			children = (
 				D2F88FA42B50577D00303D0A /* SwiftQuiz */,
+				D2F88FAE2B50577E00303D0A /* Assets.xcassets */,
 				D2F88FA32B50577D00303D0A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,14 +101,11 @@
 		D2F88FA42B50577D00303D0A /* SwiftQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				D2F88FA52B50577D00303D0A /* AppDelegate.swift */,
-				D2F88FA72B50577D00303D0A /* SceneDelegate.swift */,
-				D2F88FA92B50577D00303D0A /* ViewController.swift */,
-				4E01D3932B52487100A00488 /* Data.swift */,
-				D2F88FAB2B50577D00303D0A /* Main.storyboard */,
-				D2F88FAE2B50577E00303D0A /* Assets.xcassets */,
-				D2F88FB02B50577E00303D0A /* LaunchScreen.storyboard */,
-				D2F88FB32B50577E00303D0A /* Info.plist */,
+				D2C58E462B51BED400B0156F /* ViewControllers */,
+				D2C58E492B51BF0600B0156F /* Models */,
+				D2C58E452B51BEAB00B0156F /* Services */,
+				D2C58E482B51BEFB00B0156F /* Storyboards */,
+				D2C58E472B51BEE400B0156F /* App */,
 			);
 			path = SwiftQuiz;
 			sourceTree = "<group>";
@@ -142,8 +182,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2F88FAA2B50577D00303D0A /* ViewController.swift in Sources */,
-				48FCF1EE2B506F4A00E646D5 /* Developer.swift in Sources */,
-				48FCF1EC2B506EE000E646D5 /* DevelopersViewController.swift in Sources */,
 				D2F88FA62B50577D00303D0A /* AppDelegate.swift in Sources */,
 				D2F88FA82B50577D00303D0A /* SceneDelegate.swift in Sources */,
 				4E01D3942B52487100A00488 /* Data.swift in Sources */,
