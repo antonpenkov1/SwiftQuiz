@@ -39,6 +39,9 @@
                                 <rect key="frame" x="122.5" y="266.5" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="nJe-Jb-FrO" kind="presentation" modalPresentationStyle="fullScreen" id="dZG-Ke-Z2S"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6IJ-bU-9hV"/>
@@ -54,6 +57,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnd-3L-oqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="728" y="-482"/>
+        </scene>
+        <!--QuizStoryboard-->
+        <scene sceneID="mzg-UK-D1x">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QuizStoryboard" id="nJe-Jb-FrO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqp-tq-e4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="-531"/>
         </scene>
         <!--Creators-->
         <scene sceneID="fbb-Mv-OTJ">

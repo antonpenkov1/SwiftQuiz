@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48BB85F32B52AC900040527B /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BB85F22B52AC900040527B /* QuizStoryboard.storyboard */; };
 		4E01D3942B52487100A00488 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E01D3932B52487100A00488 /* Data.swift */; };
 		D2C58E4B2B51C43500B0156F /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C58E4A2B51C43500B0156F /* DevelopersViewController.swift */; };
 		D2C58E4D2B51C43C00B0156F /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C58E4C2B51C43C00B0156F /* Developer.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48BB85F22B52AC900040527B /* QuizStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizStoryboard.storyboard; sourceTree = "<group>"; };
 		4E01D3932B52487100A00488 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D2C58E4A2B51C43500B0156F /* DevelopersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
 		D2C58E4C2B51C43C00B0156F /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				D2F88FAB2B50577D00303D0A /* Main.storyboard */,
 				D2F88FB02B50577E00303D0A /* LaunchScreen.storyboard */,
+				48BB85F22B52AC900040527B /* QuizStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			files = (
 				D2F88FB22B50577E00303D0A /* LaunchScreen.storyboard in Resources */,
 				D2F88FAF2B50577E00303D0A /* Assets.xcassets in Resources */,
+				48BB85F32B52AC900040527B /* QuizStoryboard.storyboard in Resources */,
 				D2F88FAD2B50577D00303D0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
