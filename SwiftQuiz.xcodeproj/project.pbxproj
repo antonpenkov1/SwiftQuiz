@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48BB85F32B52AC900040527B /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BB85F22B52AC900040527B /* QuizStoryboard.storyboard */; };
 		4E01D3942B52487100A00488 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E01D3932B52487100A00488 /* Data.swift */; };
+		D2C58E4B2B51C43500B0156F /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C58E4A2B51C43500B0156F /* DevelopersViewController.swift */; };
+		D2C58E4D2B51C43C00B0156F /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C58E4C2B51C43C00B0156F /* Developer.swift */; };
 		D2F88FA62B50577D00303D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F88FA52B50577D00303D0A /* AppDelegate.swift */; };
 		D2F88FA82B50577D00303D0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F88FA72B50577D00303D0A /* SceneDelegate.swift */; };
-		D2F88FAA2B50577D00303D0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F88FA92B50577D00303D0A /* ViewController.swift */; };
 		D2F88FAD2B50577D00303D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F88FAB2B50577D00303D0A /* Main.storyboard */; };
 		D2F88FAF2B50577E00303D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F88FAE2B50577E00303D0A /* Assets.xcassets */; };
 		D2F88FB22B50577E00303D0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F88FB02B50577E00303D0A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48BB85F22B52AC900040527B /* QuizStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizStoryboard.storyboard; sourceTree = "<group>"; };
 		4E01D3932B52487100A00488 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D2C58E4A2B51C43500B0156F /* DevelopersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
+		D2C58E4C2B51C43C00B0156F /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		D2F88FA22B50577D00303D0A /* SwiftQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F88FA52B50577D00303D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F88FA72B50577D00303D0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2F88FA92B50577D00303D0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2F88FAC2B50577D00303D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2F88FAE2B50577E00303D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2F88FB12B50577E00303D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +54,7 @@
 		D2C58E462B51BED400B0156F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D2F88FA92B50577D00303D0A /* ViewController.swift */,
+				D2C58E4A2B51C43500B0156F /* DevelopersViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -70,6 +74,7 @@
 			children = (
 				D2F88FAB2B50577D00303D0A /* Main.storyboard */,
 				D2F88FB02B50577E00303D0A /* LaunchScreen.storyboard */,
+				48BB85F22B52AC900040527B /* QuizStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 		D2C58E492B51BF0600B0156F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2C58E4C2B51C43C00B0156F /* Developer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +176,7 @@
 			files = (
 				D2F88FB22B50577E00303D0A /* LaunchScreen.storyboard in Resources */,
 				D2F88FAF2B50577E00303D0A /* Assets.xcassets in Resources */,
+				48BB85F32B52AC900040527B /* QuizStoryboard.storyboard in Resources */,
 				D2F88FAD2B50577D00303D0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,10 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F88FAA2B50577D00303D0A /* ViewController.swift in Sources */,
+				D2C58E4D2B51C43C00B0156F /* Developer.swift in Sources */,
 				D2F88FA62B50577D00303D0A /* AppDelegate.swift in Sources */,
 				D2F88FA82B50577D00303D0A /* SceneDelegate.swift in Sources */,
 				4E01D3942B52487100A00488 /* Data.swift in Sources */,
+				D2C58E4B2B51C43500B0156F /* DevelopersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +346,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3UHRLQ9522;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftQuiz/Info.plist;
+				INFOPLIST_FILE = SwiftQuiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -366,7 +374,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3UHRLQ9522;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftQuiz/Info.plist;
+				INFOPLIST_FILE = SwiftQuiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
