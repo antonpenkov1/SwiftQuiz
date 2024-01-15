@@ -1,5 +1,5 @@
 //
-//  Data.swift
+//  Question.swift
 //  SwiftQuiz
 //
 //  Created by horze on 12.01.2024.
