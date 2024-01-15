@@ -200,3 +200,11 @@ struct Question {
         ]
     }
 }
+
+enum Topic: String {
+    case letAndVar = "Константы и переменные"
+    case basicOperators = "Базовые операторы"
+    case branchOperators = "Операторы ветвлений"
+    case collectionTypes = "Типы коллекций"
+    case functions = "Функции"
+}
