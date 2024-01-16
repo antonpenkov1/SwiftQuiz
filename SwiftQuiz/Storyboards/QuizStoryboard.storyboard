@@ -116,6 +116,7 @@
                     <connections>
                         <outlet property="questionLabel" destination="fZy-uD-35l" id="opX-hO-6Gw"/>
                         <outlet property="questionProgressView" destination="mQc-qn-mb4" id="6dh-0X-bes"/>
+                        <outlet property="topicLabel" destination="eRu-EO-XUX" id="9D3-9d-DnO"/>
                         <outletCollection property="answerButtons" destination="94s-Ul-2UF" collectionClass="NSMutableArray" id="sOV-Wi-D62"/>
                         <outletCollection property="answerButtons" destination="Vp7-rR-zhU" collectionClass="NSMutableArray" id="iFZ-8G-MIc"/>
                         <outletCollection property="answerButtons" destination="KU9-kY-ePb" collectionClass="NSMutableArray" id="1UY-Ka-xid"/>
@@ -193,6 +194,8 @@
                     <navigationItem key="navigationItem" title="Результат" id="Qdz-gY-Mq1"/>
                     <connections>
                         <outlet property="backButton" destination="dzk-Hh-5NK" id="cau-uv-iIC"/>
+                        <outlet property="resultImage" destination="9OE-Hc-GBU" id="TLt-ie-y6i"/>
+                        <outlet property="resultLabel" destination="lH9-vc-U0I" id="Ec1-KE-2TS"/>
                         <outlet property="shortResultLabel" destination="Gu1-5o-mcb" id="EJ8-wA-eYx"/>
                     </connections>
                 </viewController>

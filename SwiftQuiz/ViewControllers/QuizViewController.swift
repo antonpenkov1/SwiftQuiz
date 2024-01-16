@@ -8,13 +8,12 @@
 import UIKit
 
 final class QuizViewController: UIViewController {
-    
     // MARK: - IB Outlets
+    @IBOutlet var topicLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionProgressView: UIProgressView!
     
     @IBOutlet var answerButtons: [UIButton]!
-    
     // MARK: - Private Properties
     private var questionIndex = 0
     private let questions = Question.getQuestions()
@@ -24,7 +23,6 @@ final class QuizViewController: UIViewController {
     private var totalProgress: Float {
         Float(questionIndex) / Float(questions.count)
     }
-    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +36,13 @@ final class QuizViewController: UIViewController {
             resultsViewController.totalQuestionsCount = questions.count
         }
     }
-    
     // MARK: - UI Updates
     private func updateUI() {
         let currentQuestion = questions[questionIndex]
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
-        self.questionLabel.text = currentQuestion.text
-        self.questionProgressView.setProgress(totalProgress, animated: true)
+        topicLabel.text = currentQuestion.topic.rawValue
+        questionLabel.text = currentQuestion.text
+        questionProgressView.setProgress(totalProgress, animated: true)
         
         for (buttonIndex, button) in answerButtons.enumerated() {
             if buttonIndex < currentQuestion.options.count {
@@ -55,7 +53,6 @@ final class QuizViewController: UIViewController {
             }
         }
     }
-    
     // MARK: - Actions
     @IBAction func answerButtonTapped(_ sender: UIButton) {
         let currentQuestion = questions[questionIndex]
