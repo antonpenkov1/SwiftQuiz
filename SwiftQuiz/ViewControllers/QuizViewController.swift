@@ -20,7 +20,7 @@ final class QuizViewController: UIViewController {
     
     private var questionIndex = 0
     private let questions = Question.getQuestions()
-    private var selectedAnswer: [Int] = []
+    private var selectedAnswers: [Int] = []
     private var correctAnswersCount = 0
     
     private var totalProgress: Float {
@@ -45,12 +45,12 @@ final class QuizViewController: UIViewController {
     // MARK: - UI Updates
     
     private func updateUI() {
-        let currentQuestion = self.questions[self.questionIndex]
+        let currentQuestion = questions[questionIndex]
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
         self.questionLabel.text = currentQuestion.text
-        self.questionProgressView.setProgress(self.totalProgress, animated: true)
+        self.questionProgressView.setProgress(totalProgress, animated: true)
         
-        for (buttonIndex, button) in self.answerButtons.enumerated() {
+        for (buttonIndex, button) in answerButtons.enumerated() {
             if buttonIndex < currentQuestion.options.count {
                 button.setTitle(currentQuestion.options[buttonIndex], for: .normal)
                 button.isHidden = false
@@ -65,7 +65,7 @@ final class QuizViewController: UIViewController {
     @IBAction func answerButtonTapped(_ sender: UIButton) {
         let currentQuestion = questions[questionIndex]
         if let selectedIndex = answerButtons.firstIndex(of: sender) {
-            selectedAnswer.append(selectedIndex)
+            selectedAnswers.append(selectedIndex)
             if selectedIndex == currentQuestion.correctAnswerIndex {
                 correctAnswersCount += 1
             }

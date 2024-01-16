@@ -174,10 +174,10 @@
         <!--Main-->
         <scene sceneID="2zB-0d-7ol">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f2T-cn-7uq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Main" id="Xt3-js-L5T" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ntK-dD-WoZ"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2T-cn-7uq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4170" y="-46"/>
         </scene>
