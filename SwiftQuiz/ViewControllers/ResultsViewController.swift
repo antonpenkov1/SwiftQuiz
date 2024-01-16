@@ -14,13 +14,10 @@ final class ResultsViewController: UIViewController {
     
     var correctAnswersCount = 0
     var totalQuestionsCount = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         shortResultLabel.text = "Вы ответили на \(correctAnswersCount) из \(totalQuestionsCount) вопросов"
         navigationItem.hidesBackButton = true
-
-        
     }
-
 }

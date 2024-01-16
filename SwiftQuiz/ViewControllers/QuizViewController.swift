@@ -45,13 +45,11 @@ final class QuizViewController: UIViewController {
     // MARK: - UI Updates
     
     private func updateUI() {
-        // Set current question
         let currentQuestion = self.questions[self.questionIndex]
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
         self.questionLabel.text = currentQuestion.text
         self.questionProgressView.setProgress(self.totalProgress, animated: true)
         
-        // Set titles for answer buttons
         for (buttonIndex, button) in self.answerButtons.enumerated() {
             if buttonIndex < currentQuestion.options.count {
                 button.setTitle(currentQuestion.options[buttonIndex], for: .normal)
@@ -65,23 +63,18 @@ final class QuizViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func answerButtonTapped(_ sender: UIButton) {
-        // Check if tapped button is correct
         let currentQuestion = questions[questionIndex]
         if let selectedIndex = answerButtons.firstIndex(of: sender) {
             selectedAnswer.append(selectedIndex)
             if selectedIndex == currentQuestion.correctAnswerIndex {
                 correctAnswersCount += 1
-            } else {
-                print("Неверно")
             }
         }
-           
-        // Proceed to the next question
+        
         questionIndex += 1
         if questionIndex < questions.count {
             updateUI()
         } else {
-            // All questions have been answered
             finishQuiz()
         }
     }
