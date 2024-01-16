@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TopicsTableViewController: UITableViewController {
+final class TopicsTableViewController: UITableViewController {
     
     var topics: [Topic.RawValue]!
 

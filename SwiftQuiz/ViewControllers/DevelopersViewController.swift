@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DevelopersViewController: UITableViewController {
+final class DevelopersViewController: UITableViewController {
     private let team = Developer.getDevelopers()
     
     override func viewDidLoad() {
