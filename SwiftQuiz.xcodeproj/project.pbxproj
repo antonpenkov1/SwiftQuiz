@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		48BB85F32B52AC900040527B /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BB85F22B52AC900040527B /* QuizStoryboard.storyboard */; };
 		4E01D3942B52487100A00488 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E01D3932B52487100A00488 /* Data.swift */; };
+		4E7F64272B55F1A5001903FC /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F64262B55F1A5001903FC /* QuizViewController.swift */; };
+		4E7F64292B561A07001903FC /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F64282B561A07001903FC /* ResultsViewController.swift */; };
 		D2C58E4B2B51C43500B0156F /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C58E4A2B51C43500B0156F /* DevelopersViewController.swift */; };
 		D2C58E4D2B51C43C00B0156F /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C58E4C2B51C43C00B0156F /* Developer.swift */; };
 		D2F88FA62B50577D00303D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F88FA52B50577D00303D0A /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		48BB85F22B52AC900040527B /* QuizStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizStoryboard.storyboard; sourceTree = "<group>"; };
 		4E01D3932B52487100A00488 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		4E7F64262B55F1A5001903FC /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		4E7F64282B561A07001903FC /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		D2C58E4A2B51C43500B0156F /* DevelopersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
 		D2C58E4C2B51C43C00B0156F /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		D2F88FA22B50577D00303D0A /* SwiftQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				D2C58E4A2B51C43500B0156F /* DevelopersViewController.swift */,
+				4E7F64262B55F1A5001903FC /* QuizViewController.swift */,
+				4E7F64282B561A07001903FC /* ResultsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +197,8 @@
 				D2C58E4D2B51C43C00B0156F /* Developer.swift in Sources */,
 				D2F88FA62B50577D00303D0A /* AppDelegate.swift in Sources */,
 				D2F88FA82B50577D00303D0A /* SceneDelegate.swift in Sources */,
+				4E7F64292B561A07001903FC /* ResultsViewController.swift in Sources */,
+				4E7F64272B55F1A5001903FC /* QuizViewController.swift in Sources */,
 				4E01D3942B52487100A00488 /* Data.swift in Sources */,
 				D2C58E4B2B51C43500B0156F /* DevelopersViewController.swift in Sources */,
 			);
@@ -350,8 +358,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,9 +368,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Penkov.SwiftQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -378,8 +391,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,9 +401,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Penkov.SwiftQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

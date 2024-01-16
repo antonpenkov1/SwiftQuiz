@@ -10,7 +10,7 @@
         <!--Вопрос №-->
         <scene sceneID="PrN-sI-vnu">
             <objects>
-                <viewController id="nhT-gS-msO" sceneMemberID="viewController">
+                <viewController id="nhT-gS-msO" customClass="QuizViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2MX-sy-Paf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,6 +43,9 @@
                                                     <color key="baseForegroundColor" red="1" green="0.85882352939999995" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" red="0.79215686269999996" green="0.4823529412" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="2Yk-LG-Gca"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp7-rR-zhU">
                                                 <rect key="frame" x="0.0" y="66" width="288" height="50"/>
@@ -51,6 +54,9 @@
                                                     <color key="baseForegroundColor" red="1" green="0.85882352939999995" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" red="0.79215686269999996" green="0.4823529412" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="y34-Ic-ycC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU9-kY-ePb">
                                                 <rect key="frame" x="0.0" y="132" width="288" height="50"/>
@@ -59,6 +65,9 @@
                                                     <color key="baseForegroundColor" red="1" green="0.85882352939999995" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" red="0.79215686269999996" green="0.4823529412" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="C7D-IY-ljh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNZ-S1-1hB">
                                                 <rect key="frame" x="0.0" y="198" width="288" height="50"/>
@@ -67,6 +76,9 @@
                                                     <color key="baseForegroundColor" red="1" green="0.85882352939999995" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" red="0.79215686269999996" green="0.4823529412" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="kYW-XD-3Nc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -93,60 +105,81 @@
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="aGU-wF-r1L"/>
                     <connections>
-                        <segue destination="JUk-61-EUK" kind="show" identifier="showResult" id="xIP-b3-xEd"/>
+                        <outlet property="questionLabel" destination="fZy-uD-35l" id="opX-hO-6Gw"/>
+                        <outlet property="questionProgressView" destination="mQc-qn-mb4" id="6dh-0X-bes"/>
+                        <outletCollection property="answerButtons" destination="94s-Ul-2UF" collectionClass="NSMutableArray" id="sOV-Wi-D62"/>
+                        <outletCollection property="answerButtons" destination="Vp7-rR-zhU" collectionClass="NSMutableArray" id="iFZ-8G-MIc"/>
+                        <outletCollection property="answerButtons" destination="KU9-kY-ePb" collectionClass="NSMutableArray" id="1UY-Ka-xid"/>
+                        <outletCollection property="answerButtons" destination="VNZ-S1-1hB" collectionClass="NSMutableArray" id="hpO-s8-QJe"/>
+                        <segue destination="JUk-61-EUK" kind="show" identifier="showResults" id="xIP-b3-xEd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GoD-C1-bcH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2747" y="2"/>
+            <point key="canvasLocation" x="2746.875" y="1.056338028169014"/>
         </scene>
         <!--Результат-->
         <scene sceneID="sK0-Uh-1O1">
             <objects>
-                <viewController id="JUk-61-EUK" sceneMemberID="viewController">
+                <viewController id="JUk-61-EUK" customClass="ResultsViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z0Z-Jh-IVu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="910-ue-Z8E">
-                                <rect key="frame" x="60" y="126" width="200" height="316"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="910-ue-Z8E">
+                                <rect key="frame" x="63" y="128.5" width="194.5" height="89"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="succeed" translatesAutoresizingMaskIntoConstraints="NO" id="NHy-Gk-QrI">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="NHy-Gk-QrI" secondAttribute="height" multiplier="1:1" id="rax-uD-0ho"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тема изучена!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgC-17-9a6">
-                                        <rect key="frame" x="3" y="216" width="194" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тест окончен" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgC-17-9a6">
+                                        <rect key="frame" x="7" y="0.0" width="180.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов: Х из Х" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu1-5o-mcb">
-                                        <rect key="frame" x="3" y="268" width="194.5" height="48"/>
+                                        <rect key="frame" x="0.0" y="41" width="194.5" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzk-Hh-5NK">
+                                <rect key="frame" x="104.5" y="233.5" width="111.5" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Завершить"/>
+                                <connections>
+                                    <segue destination="Xt3-js-L5T" kind="presentation" modalPresentationStyle="fullScreen" id="Y88-6x-oSX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mlu-No-sUZ"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.92156862750000001" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="910-ue-Z8E" firstAttribute="centerX" secondItem="z0Z-Jh-IVu" secondAttribute="centerX" id="3Op-KX-gHh"/>
-                            <constraint firstItem="910-ue-Z8E" firstAttribute="centerY" secondItem="z0Z-Jh-IVu" secondAttribute="centerY" id="GoU-pu-9i0"/>
-                            <constraint firstItem="NHy-Gk-QrI" firstAttribute="height" secondItem="z0Z-Jh-IVu" secondAttribute="height" multiplier="0.352113" id="JjD-xE-vA5"/>
+                            <constraint firstItem="dzk-Hh-5NK" firstAttribute="top" secondItem="910-ue-Z8E" secondAttribute="bottom" constant="16" id="anJ-Tb-T5n"/>
+                            <constraint firstItem="910-ue-Z8E" firstAttribute="top" secondItem="Mlu-No-sUZ" secondAttribute="top" constant="16" id="fOW-eL-xtf"/>
+                            <constraint firstItem="dzk-Hh-5NK" firstAttribute="centerX" secondItem="z0Z-Jh-IVu" secondAttribute="centerX" id="hHK-Wx-ggX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Результат" id="Qdz-gY-Mq1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="VNt-DW-8MY"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Результат" id="Qdz-gY-Mq1"/>
+                    <connections>
+                        <outlet property="backButton" destination="dzk-Hh-5NK" id="cau-uv-iIC"/>
+                        <outlet property="shortResultLabel" destination="Gu1-5o-mcb" id="EJ8-wA-eYx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dJ-Qw-bke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3533" y="2"/>
+            <point key="canvasLocation" x="3532.5" y="1.056338028169014"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="2zB-0d-7ol">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2T-cn-7uq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" id="Xt3-js-L5T" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ntK-dD-WoZ"/>
+                </viewControllerPlaceholder>
+            </objects>
+            <point key="canvasLocation" x="4170" y="-46"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dhu-wX-NwP">
@@ -157,7 +190,10 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -170,7 +206,4 @@
             <point key="canvasLocation" x="1946" y="1"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="succeed" width="700" height="700"/>
-    </resources>
 </document>
