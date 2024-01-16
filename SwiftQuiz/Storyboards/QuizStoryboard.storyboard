@@ -170,7 +170,7 @@
                                             <color key="baseBackgroundColor" red="0.79215686269999996" green="0.4823529412" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="efE-vg-oH9" kind="presentation" id="Vjz-cU-DeV"/>
+                                            <segue destination="efE-vg-oH9" kind="presentation" identifier="wrongAnswersSegue" id="Vjz-cU-DeV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzk-Hh-5NK">
@@ -207,6 +207,7 @@
                     <navigationItem key="navigationItem" title="Результат" id="Qdz-gY-Mq1"/>
                     <connections>
                         <outlet property="backButton" destination="dzk-Hh-5NK" id="cau-uv-iIC"/>
+                        <outlet property="errorButton" destination="Ifj-0f-nl2" id="1SW-zC-l8x"/>
                         <outlet property="resultImage" destination="9OE-Hc-GBU" id="TLt-ie-y6i"/>
                         <outlet property="resultLabel" destination="lH9-vc-U0I" id="Ec1-KE-2TS"/>
                         <outlet property="shortResultLabel" destination="Gu1-5o-mcb" id="EJ8-wA-eYx"/>

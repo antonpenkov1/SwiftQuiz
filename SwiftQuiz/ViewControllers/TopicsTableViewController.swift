@@ -9,19 +9,28 @@ import UIKit
 
 final class TopicsTableViewController: UITableViewController {
     
-    var topics: [Topic.RawValue]!
+    var wrongAnswers: [Question] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        topics.count
+        return 1
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return wrongAnswers.count
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "topicCell", for: indexPath)
         
         var content = cell.defaultContentConfiguration()
-        content.text = topics[indexPath.row]
-        
+        let question = wrongAnswers[indexPath.row]
+        content.text = question.text
+        content.secondaryText = "Правильный ответ: \(question.options[question.correctAnswerIndex])"
         cell.contentConfiguration = content
+        
         return cell
     }
     

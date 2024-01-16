@@ -12,21 +12,31 @@ final class ResultsViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var shortResultLabel: UILabel!
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var errorButton: UIButton!
     @IBOutlet var resultImage: UIImageView!
     
     var correctAnswersCount = 0
     var totalQuestionsCount = 0
+    var wrongAnswers: [Question] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shortResultLabel.text = 
-        """
+        shortResultLabel.text = """
         Вы ответили правильно
         на \(correctAnswersCount) из \(totalQuestionsCount) вопросов
         """
         navigationItem.hidesBackButton = true
-        
         updateResultImage()
+        errorButton.isHidden = wrongAnswers.isEmpty
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "wrongAnswersSegue" {
+            if let navigationController = segue.destination as? UINavigationController,
+               let destinationVC = navigationController.viewControllers.first as? TopicsTableViewController {
+                destinationVC.wrongAnswers = self.wrongAnswers
+            }
+        }
     }
     
     private func updateResultImage() {
