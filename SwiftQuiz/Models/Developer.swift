@@ -36,13 +36,7 @@ struct Developer {
                 role: .developer,
                 developedQuiz: "Волшебник TableView, создал экран со списком тем и эран описания",
                 photo: "sashaPhoto"
-            ),
-            Developer(
-                name: "Максим",
-                role: .developer,
-                developedQuiz: "Маг логики, вся подковерная игра квиза создана им",
-                photo: "personPhoto"
-            ),
+            )
             ]
         
         return team

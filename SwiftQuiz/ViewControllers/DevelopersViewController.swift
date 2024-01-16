@@ -37,11 +37,7 @@ final class DevelopersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let role: Role
-        if section == 0 {
-            role = .teamLead
-        } else {
-            role = .developer
-        }
+        role = section == 0 ? .teamLead : .developer
         return role.rawValue
     }
     
