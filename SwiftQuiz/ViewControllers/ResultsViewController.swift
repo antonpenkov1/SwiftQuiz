@@ -19,7 +19,11 @@ final class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shortResultLabel.text = "Вы ответили правильно на \(correctAnswersCount) из \(totalQuestionsCount) вопросов"
+        shortResultLabel.text = 
+        """
+        Вы ответили правильно
+        на \(correctAnswersCount) из \(totalQuestionsCount) вопросов
+        """
         navigationItem.hidesBackButton = true
         
         updateResultImage()

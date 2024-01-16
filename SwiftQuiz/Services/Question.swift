@@ -20,12 +20,6 @@ struct Question {
                 topic: .letAndVar
             ),
             Question(
-                text: "Как объявить константу в Swift?",
-                options: ["let", "var", "const", "constant"],
-                correctAnswerIndex: 0,
-                topic: .letAndVar
-            ),
-            Question(
                 text: "Как объявить переменную в Swift?",
                 options: ["let", "var", "const", "variable"],
                 correctAnswerIndex: 1,
@@ -138,7 +132,7 @@ struct Question {
             ),
             Question(
                 text: "Как объявить словарь в Swift?",
-                options: ["let", "dictionary", "var", "[:"],
+                options: ["let", "dictionary", "var", "[:]"],
                 correctAnswerIndex: 3,
                 topic: .collectionTypes
             ),
