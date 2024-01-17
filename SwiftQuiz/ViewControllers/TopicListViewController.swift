@@ -25,6 +25,10 @@ final class TopicListViewController: UITableViewController {
 
 // MARK: - UITableViewDataSource
 extension TopicListViewController {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        "Основы программирования на Swift"
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         topicList.count
     }

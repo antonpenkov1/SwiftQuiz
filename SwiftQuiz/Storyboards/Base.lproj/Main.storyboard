@@ -95,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="727.5" y="191.19718309859155"/>
         </scene>
-        <!--Основы программирования на Swift-->
+        <!--SwiftQuiz-->
         <scene sceneID="y97-Lh-wZP">
             <objects>
                 <tableViewController id="Nj6-yF-Lhu" customClass="TopicListViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -132,13 +132,13 @@
                             <outlet property="delegate" destination="Nj6-yF-Lhu" id="AeH-nN-EpC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Основы программирования на Swift" id="bbZ-sb-xYl"/>
+                    <navigationItem key="navigationItem" title="SwiftQuiz" id="bbZ-sb-xYl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C36-bU-KIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1519" y="-528"/>
         </scene>
-        <!--Содержание теста-->
+        <!--Содержание-->
         <scene sceneID="dLs-Mf-1AM">
             <objects>
                 <viewController id="G3t-NA-Cio" customClass="TopicDetailsViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,7 +179,7 @@
                             <constraint firstItem="P73-Ab-Ye1" firstAttribute="top" secondItem="Sa8-24-9UM" secondAttribute="top" constant="20" id="zCa-yU-Zfi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Содержание теста" id="Aqb-DO-9KZ"/>
+                    <navigationItem key="navigationItem" title="Содержание" id="Aqb-DO-9KZ"/>
                     <connections>
                         <outlet property="contentTextView" destination="rFL-8X-tZR" id="Dy9-qg-9cy"/>
                     </connections>
