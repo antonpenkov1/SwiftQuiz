@@ -9,7 +9,7 @@ struct Question {
     let text: String
     let options: [String]
     let correctAnswerIndex: Int
-    let topic: Topic
+    let topic: TopicName
     
     static func getQuestions() -> [Question] {
         [
@@ -195,7 +195,7 @@ struct Question {
     }
 }
 
-enum Topic: String {
+enum TopicName: String {
     case letAndVar = "Константы и переменные"
     case basicOperators = "Базовые операторы"
     case branchOperators = "Операторы ветвлений"
