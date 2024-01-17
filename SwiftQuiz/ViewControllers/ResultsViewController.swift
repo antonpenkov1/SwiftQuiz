@@ -12,6 +12,7 @@ final class ResultsViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var shortResultLabel: UILabel!
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var errorButton: UIButton!
     @IBOutlet var resultImage: UIImageView!
     
     var correctAnswersCount = 0
@@ -26,6 +27,7 @@ final class ResultsViewController: UIViewController {
         """
         navigationItem.hidesBackButton = true
         updateResultImage()
+        errorButton.isHidden = wrongAnswers.isEmpty
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
