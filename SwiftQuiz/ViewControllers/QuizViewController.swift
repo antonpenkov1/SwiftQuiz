@@ -18,6 +18,7 @@ final class QuizViewController: UIViewController {
     private var questionIndex = 0
     private let questions = Question.getQuestions()
     private var selectedAnswers: [Int] = []
+    private var wrongAnswers: [Question] = []
     private var correctAnswersCount = 0
     
     private var totalProgress: Float {
@@ -34,6 +35,7 @@ final class QuizViewController: UIViewController {
             let resultsViewController = segue.destination as! ResultsViewController
             resultsViewController.correctAnswersCount = correctAnswersCount
             resultsViewController.totalQuestionsCount = questions.count
+            resultsViewController.wrongAnswers = wrongAnswers
         }
     }
     // MARK: - UI Updates
@@ -60,6 +62,8 @@ final class QuizViewController: UIViewController {
             selectedAnswers.append(selectedIndex)
             if selectedIndex == currentQuestion.correctAnswerIndex {
                 correctAnswersCount += 1
+            } else {
+                wrongAnswers.append(currentQuestion)
             }
         }
         

@@ -170,7 +170,7 @@
                                             <color key="baseBackgroundColor" red="0.79215686269999996" green="0.4823529412" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="efE-vg-oH9" kind="presentation" id="Vjz-cU-DeV"/>
+                                            <segue destination="efE-vg-oH9" kind="presentation" identifier="wrongAnswersSegue" id="Vjz-cU-DeV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzk-Hh-5NK">
