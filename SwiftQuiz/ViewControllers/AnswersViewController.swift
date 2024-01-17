@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TopicsTableViewController: UITableViewController {
+final class AnswersViewController: UITableViewController {
     
     var wrongAnswers: [Question] = []
     

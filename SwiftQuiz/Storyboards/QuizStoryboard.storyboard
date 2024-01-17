@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="3532.5" y="1.056338028169014"/>
         </scene>
-        <!--TopicsTableView-->
+        <!--AnswersTableView-->
         <scene sceneID="2Bw-Ah-nf4">
             <objects>
-                <viewControllerPlaceholder storyboardName="TopicsTableView" id="efE-vg-oH9" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AnswersTableView" id="efE-vg-oH9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gzy-xm-QTy"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCR-Bj-vQk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

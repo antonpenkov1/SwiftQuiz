@@ -33,7 +33,7 @@ final class ResultsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "wrongAnswersSegue" {
             if let navigationController = segue.destination as? UINavigationController,
-               let destinationVC = navigationController.viewControllers.first as? TopicsTableViewController {
+               let destinationVC = navigationController.viewControllers.first as? AnswersViewController {
                 destinationVC.wrongAnswers = self.wrongAnswers
             }
         }

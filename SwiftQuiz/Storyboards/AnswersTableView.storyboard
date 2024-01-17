@@ -10,7 +10,7 @@
         <!--Ошибки-->
         <scene sceneID="orz-JD-udq">
             <objects>
-                <tableViewController id="loT-a0-6iW" customClass="TopicsTableViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="loT-a0-6iW" customClass="AnswersViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jr5-RX-GWd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
