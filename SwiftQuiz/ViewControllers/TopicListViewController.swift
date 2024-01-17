@@ -33,7 +33,7 @@ extension TopicListViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "topicCell", for: indexPath)
         let topic = topicList[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = topic.name
+        content.text = "\(indexPath.row + 1). \(topic.name.rawValue)"
         cell.contentConfiguration = content
         return cell
     }

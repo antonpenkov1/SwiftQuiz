@@ -9,9 +9,8 @@ import UIKit
 
 final class TopicDetailsViewController: UIViewController {
 
-    @IBOutlet weak var contentTextView: UITextView!
-    @IBOutlet weak var startButton: UIButton!
-
+    @IBOutlet weak var contentTextView: UILabel!
+    
     var topic: Topic!
     
     override func viewDidLoad() {
