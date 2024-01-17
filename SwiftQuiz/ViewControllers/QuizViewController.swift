@@ -16,14 +16,14 @@ final class QuizViewController: UIViewController {
     @IBOutlet var answerButtons: [UIButton]!
     // MARK: - Private Properties
     private var questionIndex = 0
+    private var currentQuestion: Question {
+        questions[questionIndex]
+    }
     private let questions = Question.getQuestions()
     private var selectedAnswers: [Int] = []
     private var wrongAnswers: [Question] = []
     private var correctAnswersCount = 0
     
-    private var totalProgress: Float {
-        Float(questionIndex) / Float(questions.count)
-    }
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,19 +31,17 @@ final class QuizViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showResults" {
-            let resultsViewController = segue.destination as! ResultsViewController
-            resultsViewController.correctAnswersCount = correctAnswersCount
-            resultsViewController.totalQuestionsCount = questions.count
-            resultsViewController.wrongAnswers = wrongAnswers
-        }
+        let resultsViewController = segue.destination as! ResultsViewController
+        resultsViewController.correctAnswersCount = correctAnswersCount
+        resultsViewController.totalQuestionsCount = questions.count
+        resultsViewController.wrongAnswers = wrongAnswers
     }
     // MARK: - UI Updates
     private func updateUI() {
-        let currentQuestion = questions[questionIndex]
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
         topicLabel.text = currentQuestion.topic.rawValue
         questionLabel.text = currentQuestion.text
+        let totalProgress = Float(questionIndex) / Float(questions.count)
         questionProgressView.setProgress(totalProgress, animated: true)
         
         for (buttonIndex, button) in answerButtons.enumerated() {
@@ -57,26 +55,21 @@ final class QuizViewController: UIViewController {
     }
     // MARK: - Actions
     @IBAction func answerButtonTapped(_ sender: UIButton) {
-        let currentQuestion = questions[questionIndex]
-        if let selectedIndex = answerButtons.firstIndex(of: sender) {
-            selectedAnswers.append(selectedIndex)
-            if selectedIndex == currentQuestion.correctAnswerIndex {
-                correctAnswersCount += 1
-            } else {
-                wrongAnswers.append(currentQuestion)
-            }
+        guard let selectedIndex = answerButtons.firstIndex(of: sender) else { return }
+        
+        selectedAnswers.append(selectedIndex)
+        if selectedIndex == currentQuestion.correctAnswerIndex {
+            correctAnswersCount += 1
+        } else {
+            wrongAnswers.append(currentQuestion)
         }
         
         questionIndex += 1
         if questionIndex < questions.count {
             updateUI()
         } else {
-            finishQuiz()
+            performSegue(withIdentifier: "showResults", sender: nil)
         }
-    }
-    
-    private func finishQuiz() {
-        performSegue(withIdentifier: "showResults", sender: nil)
     }
 }
 
