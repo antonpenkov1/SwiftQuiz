@@ -164,7 +164,8 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Start"/>
                                         <connections>
-                                            <segue destination="FzA-u2-ilp" kind="presentation" id="6eY-qq-u90"/>
+                                            <action selector="topicButtonTapped:" destination="G3t-NA-Cio" eventType="touchUpInside" id="pC6-b8-WIv"/>
+                                            <segue destination="FzA-u2-ilp" kind="presentation" identifier="showQuiz" id="6eY-qq-u90"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -182,6 +183,7 @@
                     <navigationItem key="navigationItem" title="Содержание теста" id="Aqb-DO-9KZ"/>
                     <connections>
                         <outlet property="contentTextView" destination="rFL-8X-tZR" id="Dy9-qg-9cy"/>
+                        <outlet property="startButton" destination="9uW-je-NcC" id="Asl-tD-4vE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnJ-Jw-PnB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,8 +11,8 @@ struct Question {
     let correctAnswerIndex: Int
     let topic: TopicName
     
-    static func getQuestions() -> [Question] {
-        [
+    static func getQuestions(forTopic topic: TopicName) -> [Question] {
+        let allQuestion = [
             Question(
                 text: "Как объявить константу в Swift?",
                 options: ["let", "var", "const", "constant"],
@@ -192,6 +192,7 @@ struct Question {
                 topic: .functions
             )
         ]
+        return allQuestion.filter { $0.topic == topic}
     }
 }
 

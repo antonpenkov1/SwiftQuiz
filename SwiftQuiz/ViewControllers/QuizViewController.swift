@@ -16,10 +16,11 @@ final class QuizViewController: UIViewController {
     @IBOutlet var answerButtons: [UIButton]!
     // MARK: - Private Properties
     private var questionIndex = 0
+    var selectedTopic: TopicName?
     private var currentQuestion: Question {
         questions[questionIndex]
     }
-    private let questions = Question.getQuestions()
+    private var questions: [Question] = []
     private var selectedAnswers: [Int] = []
     private var wrongAnswers: [Question] = []
     private var correctAnswersCount = 0
@@ -27,6 +28,10 @@ final class QuizViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let selectedTopic = selectedTopic {
+            topicLabel.text = selectedTopic.rawValue
+            questions = Question.getQuestions(forTopic: selectedTopic)
+        }
         updateUI()
     }
     
