@@ -32,9 +32,9 @@ final class TopicListViewController: UITableViewController {
 
 // MARK: - UITableViewDataSource
 extension TopicListViewController {
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "Основы программирования на Swift"
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        "Основы программирования на Swift"
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         topicList.count
@@ -50,4 +50,30 @@ extension TopicListViewController {
         cell.contentConfiguration = content
         return cell
     }
+}
+
+// MARK: - UITableViewDelegate
+extension TopicListViewController {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let contentView = UIView()
+        
+        let headerLabel = UILabel(
+            frame: CGRect(
+                x: 16,
+                y: 3,
+                width: tableView.frame.width - 32,
+                height: 20
+            )
+        )
+        headerLabel.text = "Основы программирования на Swift"
+        headerLabel.textColor = UIColor(white: 1, alpha: 0.9)
+        contentView.addSubview(headerLabel)
+        
+        return contentView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        30
+    }
+    
 }
