@@ -196,6 +196,94 @@ struct Question {
     }
 }
 
+struct Topic {
+    let name: TopicName
+    let content: String
+    
+    static func getTopics() -> [Topic] {
+        [
+            Topic(
+                name: .letAndVar,
+                content: """
+                Приветствие
+                - Краткое описание курса.
+                - Регламент проведения уроков
+                 
+                Введение
+                - Краткая история Swift
+                - Преимущество языка
+
+                Синтаксис языка и основные концепции:
+                - Знакомство с Playground
+                - Константы и переменные
+                - Базовые типы данных
+                """
+            ),
+            Topic(
+                name: .basicOperators,
+                content: """
+                Базовые операторы:
+                - Арифметические операторы
+                - Операторы присваивания
+                - Операторы сравнения
+                - Операторы диапазона
+                - Логические операторы
+                """
+            ),
+            Topic(
+                name: .branchOperators,
+                content: """
+                Операторы ветвлений
+                - if-else
+                - Тернарный оператор
+                - switch statement
+                """
+            ),
+            Topic(
+                name: .collectionTypes,
+                content: """
+                Типы коллекций
+                - Массивы
+                - Множества
+                - Словари
+                - Строки
+                 
+                Циклы
+                - for-in
+                - while
+                - repeat-while
+                """
+            ),
+            Topic(
+                name: .functions,
+                content: """
+                Функции
+                - Определение функции
+                - Объявление функции
+                - Функции возвращающие значения
+                - Функции с параметрами
+                """
+            )
+        ]
+    }
+}
+
+struct CourseContent {
+    let topics: [Topic]
+    let questions: [Question]
+    
+    init() {
+        self.topics = Topic.getTopics()
+        self.questions = topics.flatMap { Question.getQuestions(forTopic: $0.name) }
+    }
+}
+
+
+struct UserAnswer {
+    let question: Question
+    let answerIndex: Int
+}
+
 enum TopicName: String {
     case letAndVar = "Константы и переменные"
     case basicOperators = "Базовые операторы"
