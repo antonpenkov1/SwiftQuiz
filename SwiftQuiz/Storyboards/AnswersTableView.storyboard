@@ -34,7 +34,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Ошибки" id="pVk-8C-bvd">
                         <barButtonItem key="rightBarButtonItem" title="Закрыть" style="done" id="wMc-VH-FKk">
-                            <color key="tintColor" red="0.46152955293655396" green="0.27473786473274231" blue="0.91353613138198853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="closeButton:" destination="loT-a0-6iW" id="wqE-Iz-YYq"/>
                             </connections>
