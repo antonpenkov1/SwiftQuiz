@@ -34,11 +34,16 @@ final class AnswersViewController: UITableViewController {
         Правильный ответ: \(question.options[question.correctAnswerIndex])
         Ваш ответ: \(userAnswerText)
         """
+        content.textProperties.color = UIColor(white: 1, alpha: 0.9)
+        content.secondaryTextProperties.color = UIColor(white: 1, alpha: 0.8)
         cell.contentConfiguration = content
         
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     @IBAction func closeButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
