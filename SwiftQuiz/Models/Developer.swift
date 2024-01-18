@@ -16,7 +16,7 @@ struct Developer {
             Developer(
                 name: "Антон",
                 role: .teamLead,
-                developedQuiz: "Самый могучий, собрал несобираемое",
+                developedQuiz: "Самый могучий, сделал невозможное - собрал несобираемое",
                 photo: "antonPhoto"
             ),
             Developer(
@@ -28,7 +28,7 @@ struct Developer {
             Developer(
                 name: "Костя",
                 role: .developer,
-                developedQuiz: "Чародей DataSource. Все вопросики его заслуга",
+                developedQuiz: "Чародей DataSource и логики ViewController. Все вопросики его заслуга",
                 photo: "personPhoto"
             ),
             Developer(

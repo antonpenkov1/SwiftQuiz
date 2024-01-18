@@ -9,6 +9,12 @@ import UIKit
 
 final class TopicListViewController: UITableViewController {
     private let topicList = Topic.getTopics()
+    private var cellTextColor = UIColor(
+        red: 246 / 255,
+        green: 246 / 255,
+        blue: 246 / 255,
+        alpha: 1
+    )
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,7 @@ final class TopicListViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let detailsVC = segue.destination as? TopicDetailsViewController
         detailsVC?.topic = topicList[indexPath.row]
+        detailsVC?.topicNumber = indexPath.row + 1
     }
 }
 
@@ -38,6 +45,8 @@ extension TopicListViewController {
         let topic = topicList[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = "\(indexPath.row + 1). \(topic.name.rawValue)"
+        content.textProperties.color = cellTextColor
+        content.textProperties.font = UIFont(name: "KohinoorBangla-Semibold", size: 20) ?? .systemFont(ofSize: 20)
         cell.contentConfiguration = content
         return cell
     }

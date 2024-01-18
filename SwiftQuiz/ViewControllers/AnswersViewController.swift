@@ -10,10 +10,6 @@ import UIKit
 final class AnswersViewController: UITableViewController {
     
     var wrongAnswers: [Question] = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -34,4 +30,8 @@ final class AnswersViewController: UITableViewController {
         return cell
     }
     
+    
+    @IBAction func closeButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
 }

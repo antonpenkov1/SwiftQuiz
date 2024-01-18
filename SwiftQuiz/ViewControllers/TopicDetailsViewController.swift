@@ -9,18 +9,27 @@ import UIKit
 
 final class TopicDetailsViewController: UIViewController {
 
-    @IBOutlet weak var contentTextView: UILabel!
+    @IBOutlet var topicNumberLabel: UILabel!
+    @IBOutlet var topicLabel: UILabel!
+    @IBOutlet weak var contentTextLabel: UILabel!
     @IBOutlet var startButton: UIButton!
     
     var topic: Topic!
+    var topicNumber: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentTextView.text = topic.content
+        contentTextLabel.text = topic.content
+        topicLabel.text = topic.name.rawValue
+        topicNumberLabel.text = topicNumber.formatted()
     }
     
     @IBAction func topicButtonTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "showQuiz", sender: self)
+    }
+    
+    @IBAction func backButtonAction() {
+        dismiss(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
