@@ -66,7 +66,7 @@ extension TopicListViewController {
             )
         )
         headerLabel.text = "Основы программирования на Swift"
-        headerLabel.textColor = UIColor(white: 1, alpha: 0.9)
+        headerLabel.textColor = UIColor(white: 1, alpha: 0.75)
         contentView.addSubview(headerLabel)
         
         return contentView

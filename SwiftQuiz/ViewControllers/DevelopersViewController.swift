@@ -76,4 +76,28 @@ final class DevelopersViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let contentView = UIView()
+        
+        let headerLabel = UILabel(
+            frame: CGRect(
+                x: 16,
+                y: 3,
+                width: tableView.frame.width - 32,
+                height: 20
+            )
+        )
+        let role: Role
+        role = section == 0 ? .teamLead : .developer
+        headerLabel.text = role.rawValue
+        headerLabel.textColor = UIColor(white: 1, alpha: 0.75)
+        contentView.addSubview(headerLabel)
+        
+        return contentView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        30
+    }
 }
