@@ -17,7 +17,7 @@ final class ResultsViewController: UIViewController {
     
     var correctAnswersCount = 0
     var totalQuestionsCount = 0
-    var wrongAnswers: [Question] = []
+    var userWrongAnswers: [UserAnswer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +27,14 @@ final class ResultsViewController: UIViewController {
         """
         navigationItem.hidesBackButton = true
         updateResultImage()
-        errorButton.isHidden = wrongAnswers.isEmpty
+        errorButton.isHidden = userWrongAnswers.isEmpty
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "wrongAnswersSegue" {
             if let navigationController = segue.destination as? UINavigationController,
                let destinationVC = navigationController.viewControllers.first as? AnswersViewController {
-                destinationVC.wrongAnswers = self.wrongAnswers
+                destinationVC.userWrongAnswers = self.userWrongAnswers
             }
         }
     }

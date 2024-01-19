@@ -22,7 +22,7 @@ final class QuizViewController: UIViewController {
     }
     private var questions: [Question] = []
     private var selectedAnswers: [Int] = []
-    private var wrongAnswers: [Question] = []
+    private var userWrongAnswers: [UserAnswer] = []
     private var correctAnswersCount = 0
     
     // MARK: - Lifecycle
@@ -39,7 +39,7 @@ final class QuizViewController: UIViewController {
         let resultsViewController = segue.destination as! ResultsViewController
         resultsViewController.correctAnswersCount = correctAnswersCount
         resultsViewController.totalQuestionsCount = questions.count
-        resultsViewController.wrongAnswers = wrongAnswers
+        resultsViewController.userWrongAnswers = userWrongAnswers
     }
     // MARK: - UI Updates
     private func updateUI() {
@@ -66,7 +66,8 @@ final class QuizViewController: UIViewController {
         if selectedIndex == currentQuestion.correctAnswerIndex {
             correctAnswersCount += 1
         } else {
-            wrongAnswers.append(currentQuestion)
+            let userAnswer = UserAnswer(question: currentQuestion, answerIndex: selectedIndex)
+            userWrongAnswers.append(userAnswer)
         }
         
         questionIndex += 1
