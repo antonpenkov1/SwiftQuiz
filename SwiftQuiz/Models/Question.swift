@@ -7,191 +7,361 @@
 
 struct Question {
     let text: String
-    let options: [String]
-    let correctAnswerIndex: Int
+    let answers: [Answer]
     let topic: TopicName
     
     static func getQuestions(forTopic topic: TopicName) -> [Question] {
         let allQuestion = [
             Question(
-                text: "Как объявить константу в Swift?",
-                options: ["let", "var", "const", "constant"],
-                correctAnswerIndex: 0,
+                text: "Создание новой переменной/константы это?",
+                answers: [
+                    Answer(answer: "Объявление", type: .correct),
+                    Answer(answer: "Модификация", type: .wrong),
+                    Answer(answer: "Гибридизация", type: .wrong),
+                    Answer(answer: "Полиморфизм", type: .wrong)
+                ].shuffled(),
+                topic: .letAndVar
+            ),
+            Question(
+                text: "Каким ключевым словом объявляется константа в Swift?",
+                answers: [
+                    Answer(answer: "let", type: .correct),
+                    Answer(answer: "var", type: .wrong),
+                    Answer(answer: "const", type: .wrong),
+                    Answer(answer: "constant", type: .wrong)
+                ].shuffled(),
                 topic: .letAndVar
             ),
             Question(
                 text: "Как объявить переменную в Swift?",
-                options: ["let", "var", "const", "variable"],
-                correctAnswerIndex: 1,
+                answers: [
+                    Answer(answer: "let", type: .wrong),
+                    Answer(answer: "var", type: .correct),
+                    Answer(answer: "const", type: .wrong),
+                    Answer(answer: "variable", type: .wrong)
+                ].shuffled(),
                 topic: .letAndVar
             ),
             Question(
                 text: "Какие значения могут быть присвоены константам в Swift?",
-                options: ["Только однократно изменяемые", "Только многократно изменяемые", "Любые", "Только числа и строки"],
-                correctAnswerIndex: 0,
-                topic: .letAndVar
-            ),
-            Question(
-                text: "Можно ли изменять значение константы после инициализации в Swift?",
-                options: ["Да", "Нет"],
-                correctAnswerIndex: 1,
+                answers: [
+                    Answer(answer: "Только однократно изменяемые", type: .correct),
+                    Answer(answer: "Только многократно изменяемые", type: .wrong),
+                    Answer(answer: "Любые", type: .wrong),
+                    Answer(answer: "Только числа и строки", type: .wrong)
+                ].shuffled(),
                 topic: .letAndVar
             ),
             Question(
                 text: "Можно ли изменять значение переменной после инициализации в Swift?",
-                options: ["Да", "Нет"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "Да", type: .correct),
+                    Answer(answer: "Нет", type: .wrong)
+                ],
+                topic: .letAndVar
+            ),
+            Question(
+                text: "Можно ли изменять значение константы после инициализации в Swift?",
+                answers: [
+                    Answer(answer: "Да", type: .wrong),
+                    Answer(answer: "Нет", type: .correct)
+                ],
                 topic: .letAndVar
             ),
             //"Базовые операторы"
             Question(
                 text: "Какой оператор используется для деления в Swift?",
-                options: ["/", "*", "-", "+"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "/", type: .correct),
+                    Answer(answer: "*", type: .wrong),
+                    Answer(answer: "-", type: .wrong),
+                    Answer(answer: "+", type: .wrong)
+                ].shuffled(),
                 topic: .basicOperators
             ),
             Question(
                 text: "Какой оператор используется для сложения чисел в Swift?",
-                options: ["+", "*", "-", "/"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "+", type: .correct),
+                    Answer(answer: "*", type: .wrong),
+                    Answer(answer: "-", type: .wrong),
+                    Answer(answer: "/", type: .wrong)
+                ].shuffled(),
                 topic: .basicOperators
             ),
             Question(
                 text: "Какой оператор используется для вычитания чисел в Swift?",
-                options: ["+", "*", "-", "/"],
-                correctAnswerIndex: 2,
+                answers: [
+                    Answer(answer: "-", type: .correct),
+                    Answer(answer: "+", type: .wrong),
+                    Answer(answer: "*", type: .wrong),
+                    Answer(answer: "/", type: .wrong)
+                ].shuffled(),
                 topic: .basicOperators
             ),
             Question(
                 text: "Какой оператор используется для умножения чисел в Swift?",
-                options: ["+", "*", "-", "/"],
-                correctAnswerIndex: 1,
+                answers: [
+                    Answer(answer: "*", type: .correct),
+                    Answer(answer: "+", type: .wrong),
+                    Answer(answer: "-", type: .wrong),
+                    Answer(answer: "/", type: .wrong)
+                ].shuffled(),
                 topic: .basicOperators
             ),
             Question(
                 text: "Какой оператор используется для деления чисел в Swift?",
-                options: ["+", "*", "-", "/"],
-                correctAnswerIndex: 3,
+                answers: [
+                    Answer(answer: "/", type: .correct),
+                    Answer(answer: "+", type: .wrong),
+                    Answer(answer: "*", type: .wrong),
+                    Answer(answer: "-", type: .wrong)
+                ].shuffled(),
                 topic: .basicOperators
             ),
             Question(
                 text: "Какой оператор используется для нахождения остатка от деления в Swift?",
-                options: ["%", "*", "-", "/"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "%", type: .wrong),
+                    Answer(answer: "*", type: .wrong),
+                    Answer(answer: "-", type: .wrong),
+                    Answer(answer: "/", type: .wrong)
+                ].shuffled(),
                 topic: .basicOperators
             ),
             //"Операторы ветвлений"
             Question(
                 text: "Какая конструкция используется для выполнения условного ветвления в Swift?",
-                options: ["if", "for", "while", "switch"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "if", type: .correct),
+                    Answer(answer: "for", type: .wrong),
+                    Answer(answer: "while", type: .wrong),
+                    Answer(answer: "switch", type: .wrong)
+                ].shuffled(),
                 topic: .branchOperators
             ),
             Question(
                 text: "Какой оператор используется для выполнения блока кода при условии, что определенное условие истинно?",
-                options: ["if", "for", "while", "switch"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "if", type: .correct),
+                    Answer(answer: "for", type: .wrong),
+                    Answer(answer: "while", type: .wrong),
+                    Answer(answer: "switch", type: .wrong)
+                ].shuffled(),
                 topic: .branchOperators
             ),
             Question(
                 text: "Какой оператор используется для выполнения одного блока кода, если условие ложно, и другого блока кода, если условие истинно?",
-                options: ["if", "for", "while", "switch"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "if", type: .correct),
+                    Answer(answer: "for", type: .wrong),
+                    Answer(answer: "while", type: .wrong),
+                    Answer(answer: "switch", type: .wrong)
+                ].shuffled(),
                 topic: .branchOperators
             ),
             Question(
                 text: "Какой оператор позволяет проверить несколько условий и выполнить определенный блок кода для каждого соответствующего условия?",
-                options: ["if", "for", "while", "switch"],
-                correctAnswerIndex: 3,
+                answers: [
+                    Answer(answer: "switch", type: .correct),
+                    Answer(answer: "if", type: .wrong),
+                    Answer(answer: "for", type: .wrong),
+                    Answer(answer: "while", type: .wrong)
+                ].shuffled(),
                 topic: .branchOperators
             ),
             Question(
                 text: "Какой оператор в Swift позволяет проверить несколько условий и выполнить определенный блок кода для каждого истинного условия по порядку?",
-                options: ["if", "for", "while", "switch"],
-                correctAnswerIndex: 3,
+                answers: [
+                    Answer(answer: "switch", type: .correct),
+                    Answer(answer: "if", type: .wrong),
+                    Answer(answer: "for", type: .wrong),
+                    Answer(answer: "while", type: .wrong)
+                ].shuffled(),
                 topic: .branchOperators
             ),
             Question(
                 text: "Какой оператор используется для выполнения блока кода при условии, что определенное условие ложно?",
-                options: ["if", "for", "while", "switch"],
-                correctAnswerIndex: 3,
+                answers: [
+                    Answer(answer: "switch", type: .correct),
+                    Answer(answer: "if", type: .wrong),
+                    Answer(answer: "for", type: .wrong),
+                    Answer(answer: "while", type: .wrong)
+                ].shuffled(),
                 topic: .branchOperators
             ),
             //"Типы коллекций"
             Question(
                 text: "Какой тип коллекции представляет неупорядоченный набор уникальных значений в Swift?",
-                options: ["Массив", "Словарь", "Множество", "Строка"],
-                correctAnswerIndex: 2,
+                answers: [
+                    Answer(answer: "Множество", type: .correct),
+                    Answer(answer: "Массив", type: .wrong),
+                    Answer(answer: "Словарь", type: .wrong),
+                    Answer(answer: "Строка", type: .wrong)
+                ].shuffled(),
                 topic: .collectionTypes
             ),
             Question(
                 text: "Как объявить массив в Swift?",
-                options: ["let", "array", "var", "[]"],
-                correctAnswerIndex: 3,
+                answers: [
+                    Answer(answer: "[]", type: .correct),
+                    Answer(answer: "let", type: .wrong),
+                    Answer(answer: "array", type: .wrong),
+                    Answer(answer: "var", type: .wrong)
+                ].shuffled(),
                 topic: .collectionTypes
             ),
             Question(
                 text: "Как объявить словарь в Swift?",
-                options: ["let", "dictionary", "var", "[:]"],
-                correctAnswerIndex: 3,
+                answers: [
+                    Answer(answer: "[:]", type: .correct),
+                    Answer(answer: "let", type: .wrong),
+                    Answer(answer: "dictionary", type: .wrong),
+                    Answer(answer: "var", type: .wrong)
+                ].shuffled(),
                 topic: .collectionTypes
             ),
             Question(
                 text: "Как объявить множество в Swift?",
-                options: ["let", "set", "var", "{}"],
-                correctAnswerIndex: 1,
+                answers: [
+                    Answer(answer: "set", type: .correct),
+                    Answer(answer: "let", type: .wrong),
+                    Answer(answer: "var", type: .wrong),
+                    Answer(answer: "{}", type: .wrong)
+                ].shuffled(),
                 topic: .collectionTypes
             ),
             Question(
                 text: "Какой тип коллекции используется для хранения упорядоченных и повторяющихся элементов?",
-                options: ["Массив", "Словарь", "Множество", "Строка"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "Массив", type: .correct),
+                    Answer(answer: "Словарь", type: .wrong),
+                    Answer(answer: "Множество", type: .wrong),
+                    Answer(answer: "Строка", type: .wrong)
+                ].shuffled(),
                 topic: .collectionTypes
             ),
             Question(
                 text: "Какой тип коллекции используется для хранения пар ключ-значение?",
-                options: ["Массив", "Словарь", "Множество", "Строка"],
-                correctAnswerIndex: 1,
+                answers: [
+                    Answer(answer: "Словарь", type: .correct),
+                    Answer(answer: "Массив", type: .wrong),
+                    Answer(answer: "Множество", type: .wrong),
+                    Answer(answer: "Строка", type: .wrong)
+                ].shuffled(),
                 topic: .collectionTypes
             ),
             //"Функции"
             Question(
                 text: "Как объявить функцию в Swift?",
-                options: ["method", "class", "function", "func"],
-                correctAnswerIndex: 3,
-                topic: .functions
-            ),
-            Question(
-                text: "Как объявить функцию в Swift?",
-                options: ["func", "function", "fn", "def"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "func", type: .correct),
+                    Answer(answer: "method", type: .wrong),
+                    Answer(answer: "class", type: .wrong),
+                    Answer(answer: "function", type: .wrong)
+                ].shuffled(),
                 topic: .functions
             ),
             Question(
                 text: "Каким образом можно передать параметры в функцию в Swift?",
-                options: ["По значению", "По ссылке", "По значению и по ссылке", "Только по ссылке"],
-                correctAnswerIndex: 2,
+                answers: [
+                    Answer(answer: "По значению и по ссылке", type: .correct),
+                    Answer(answer: "По значению", type: .wrong),
+                    Answer(answer: "По ссылке", type: .wrong),
+                    Answer(answer: "Только по ссылке", type: .wrong)
+                ].shuffled(),
                 topic: .functions
             ),
             Question(
                 text: "Может ли функция в Swift возвращать несколько значений?",
-                options: ["Да, с помощью кортежей", "Нет, только одно значение", "Да, с помощью массивов", "Нет, функция может вернуть только одно значение, но это может быть кортеж"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "Да, с помощью кортежей", type: .correct),
+                    Answer(answer: "Нет, только одно значение", type: .wrong),
+                    Answer(answer: "Да, с помощью массивов", type: .wrong),
+                    Answer(answer: "Нет, функция может вернуть только одно значение, но это может быть кортеж", type: .wrong)
+                ].shuffled(),
                 topic: .functions
             ),
             Question(
                 text: "Можно ли в Swift передавать функцию в качестве параметра другой функции?",
-                options: ["Да", "Нет"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "Да", type: .correct),
+                    Answer(answer: "Нет", type: .wrong)
+                ],
                 topic: .functions
             ),
             Question(
                 text: "Что такое рекурсия?",
-                options: ["Процесс вызова функции из самой себя", "Процесс вызова нескольких функций в цикле", "Имя функции совпадает с именем класса", "Техника оптимизации функций"],
-                correctAnswerIndex: 0,
+                answers: [
+                    Answer(answer: "Процесс вызова функции из самой себя", type: .correct),
+                    Answer(answer: "Процесс вызова нескольких функций в цикле", type: .wrong),
+                    Answer(answer: "Имя функции совпадает с именем класса", type: .wrong),
+                    Answer(answer: "Техника оптимизации функций", type: .wrong)
+                ].shuffled(),
                 topic: .functions
+            ),
+            //"Функции высшего порядка"
+            Question(
+                text: "Какая функция используется для преобразования элементов массива в новый массив?",
+                answers: [
+                    Answer(answer: "map", type: .correct),
+                    Answer(answer: "reduce", type: .wrong),
+                    Answer(answer: "compactMap", type: .wrong),
+                    Answer(answer: "sorted", type: .wrong)
+                ].shuffled(),
+                topic: .superFunc
+            ),
+            Question(
+                text: "Какая функция используется для фильтрации элементов массива?",
+                answers: [
+                    Answer(answer: "filter", type: .correct),
+                    Answer(answer: "map", type: .wrong),
+                    Answer(answer: "compactMap", type: .wrong),
+                    Answer(answer: "sorted", type: .wrong)
+                ].shuffled(),
+                topic: .superFunc
+            ),
+            Question(
+                text: "Какая функция используется для преобразования элементов массива и удаления всех nil значений?",
+                answers: [
+                    Answer(answer: "compactMap", type: .correct),
+                    Answer(answer: "map", type: .wrong),
+                    Answer(answer: "flatMap", type: .wrong),
+                    Answer(answer: "sorted", type: .wrong)
+                ].shuffled(),
+                topic: .superFunc
+            ),
+            Question(
+                text: "Что делает функция shuffled()?",
+                answers: [
+                    Answer(answer: "Изменяет порядок массивов случайным образом", type: .correct),
+                    Answer(answer: "Меняет значение параметра с true на false, и наоборот", type: .wrong),
+                    Answer(answer: "Добавляет элемент в массив", type: .wrong),
+                    Answer(answer: "Удаляет рандомный элемент из массива", type: .wrong)
+                ].shuffled(),
+                topic: .superFunc
+            ),
+            Question(
+                text: "Какая функция используется для преобразования массива массивов в один массив?",
+                answers: [
+                    Answer(answer: "flatMap", type: .correct),
+                    Answer(answer: "compactMap", type: .wrong),
+                    Answer(answer: "reduce", type: .wrong),
+                    Answer(answer: "map", type: .wrong)
+                ].shuffled(),
+                topic: .superFunc
+            ),
+            Question(
+                text: "Как работает функция sorted в Swift?",
+                answers: [
+                    Answer(answer: "Она сортирует элементы массива в порядке возрастания", type: .correct),
+                    Answer(answer: "Она сортирует элементы массива в порядке убывания", type: .wrong),
+                    Answer(answer: "Она перемешивает элементы массива в случайном порядке", type: .wrong),
+                    Answer(answer: "Она удаляет дубликаты из массива", type: .wrong)
+                ].shuffled(),
+                topic: .superFunc
             )
-        ]
+        ].shuffled()
         return allQuestion.filter { $0.topic == topic}
     }
 }
@@ -250,25 +420,24 @@ struct Topic {
                 - Функции возвращающие значения
                 - Функции с параметрами
                 """
+            ),
+            Topic(
+                name: .superFunc,
+                content: """
+            Функции высшего порядка:
+            -sorted
+            -map
+            -flatMap 
+            и другие
+            """
             )
         ]
     }
 }
 
-struct CourseContent {
-    let topics: [Topic]
-    let questions: [Question]
-    
-    init() {
-        self.topics = Topic.getTopics()
-        self.questions = topics.flatMap { Question.getQuestions(forTopic: $0.name) }
-    }
-}
-
-
-struct UserAnswer {
-    let question: Question
-    let answerIndex: Int
+struct Answer {
+    let answer: String
+    let type: ResponseType
 }
 
 enum TopicName: String {
@@ -277,4 +446,10 @@ enum TopicName: String {
     case branchOperators = "Операторы ветвлений"
     case collectionTypes = "Типы коллекций"
     case functions = "Функции"
+    case superFunc = "Функции высшего порядка"
+}
+
+enum ResponseType {
+    case correct
+    case wrong
 }

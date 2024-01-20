@@ -12,7 +12,6 @@ final class TopicDetailsViewController: UIViewController {
     @IBOutlet var topicNumberLabel: UILabel!
     @IBOutlet var topicLabel: UILabel!
     @IBOutlet weak var contentTextLabel: UILabel!
-    @IBOutlet var startButton: UIButton!
     
     var topic: Topic!
     var topicNumber: Int!
@@ -24,21 +23,13 @@ final class TopicDetailsViewController: UIViewController {
         topicNumberLabel.text = topicNumber.formatted()
     }
     
-    @IBAction func topicButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "showQuiz", sender: self)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationController = segue.destination as? UINavigationController else { return }
+        let destinationVC = navigationController.topViewController as? QuizViewController
+        destinationVC?.selectedTopic = topic.name
     }
     
     @IBAction func backButtonAction() {
         dismiss(animated: true)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showQuiz" {
-            if let navigationController = segue.destination as? UINavigationController,
-               let destinationVC = navigationController.viewControllers.first as? QuizViewController {
-                destinationVC.selectedTopic = topic.name
-            }
-        }
-    }
-
 }

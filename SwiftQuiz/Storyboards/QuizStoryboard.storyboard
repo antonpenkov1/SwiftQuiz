@@ -212,7 +212,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="Qdz-gY-Mq1"/>
                     <connections>
-                        <outlet property="backButton" destination="dzk-Hh-5NK" id="cau-uv-iIC"/>
                         <outlet property="errorButton" destination="Ifj-0f-nl2" id="1SW-zC-l8x"/>
                         <outlet property="resultImage" destination="9OE-Hc-GBU" id="TLt-ie-y6i"/>
                         <outlet property="resultLabel" destination="lH9-vc-U0I" id="Ec1-KE-2TS"/>

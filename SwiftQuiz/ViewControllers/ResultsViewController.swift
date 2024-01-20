@@ -11,37 +11,38 @@ final class ResultsViewController: UIViewController {
     
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var shortResultLabel: UILabel!
-    @IBOutlet var backButton: UIButton!
     @IBOutlet var errorButton: UIButton!
     @IBOutlet var resultImage: UIImageView!
     
-    var correctAnswersCount = 0
-    var totalQuestionsCount = 0
-    var userWrongAnswers: [UserAnswer] = []
+    var wrongAnswers: [Answer]!
+    var questionsWithMistakes: [Question]!
+    var totalQuestionsCount: Int!
+    
+    private var correctAnswerscount: Int {
+        totalQuestionsCount - wrongAnswers.count
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         shortResultLabel.text = """
         Вы ответили правильно
-        на \(correctAnswersCount) из \(totalQuestionsCount) вопросов
+        на \(correctAnswerscount) из \(totalQuestionsCount ?? 0) вопросов
         """
         navigationItem.hidesBackButton = true
         updateResultImage()
-        errorButton.isHidden = userWrongAnswers.isEmpty
+        errorButton.isHidden = (totalQuestionsCount == correctAnswerscount) ? true : false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "wrongAnswersSegue" {
-            if let navigationController = segue.destination as? UINavigationController,
-               let destinationVC = navigationController.viewControllers.first as? AnswersViewController {
-                destinationVC.userWrongAnswers = self.userWrongAnswers
-            }
-        }
+        guard let navigationController = segue.destination as? UINavigationController else {return }
+        let answersVC = navigationController.topViewController as? AnswersViewController
+        answersVC?.wrongAnswers = wrongAnswers
+        answersVC?.questionsWithMistakes =  questionsWithMistakes
     }
     
     private func updateResultImage() {
         let successThreshold = 0.8
-        let successRate = Double(correctAnswersCount) / Double(totalQuestionsCount)
+        let successRate = Double(correctAnswerscount) / Double(totalQuestionsCount)
         
         if successRate >= successThreshold {
             resultImage.image = UIImage(named: "succeed")
@@ -52,5 +53,3 @@ final class ResultsViewController: UIViewController {
         }
     }
 }
-
-

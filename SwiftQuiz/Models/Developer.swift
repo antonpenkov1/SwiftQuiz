@@ -45,5 +45,5 @@ struct Developer {
 
 enum Role: String {
     case teamLead = "Teamlead"
-    case developer = "Developer"
+    case developer = "Developers"
 }

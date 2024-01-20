@@ -14,60 +14,44 @@ final class QuizViewController: UIViewController {
     @IBOutlet var questionProgressView: UIProgressView!
     
     @IBOutlet var answerButtons: [UIButton]!
+    
+    // MARK: - Public Properties
+    var selectedTopic: TopicName!
+    
     // MARK: - Private Properties
     private var questionIndex = 0
-    var selectedTopic: TopicName?
+    private var questions: [Question] = []
+    private var wrongAnswers: [Answer] = []
+    private var questionsWithMistakes: [Question] = []
+    
     private var currentQuestion: Question {
         questions[questionIndex]
     }
-    private var questions: [Question] = []
-    private var selectedAnswers: [Int] = []
-    private var userWrongAnswers: [UserAnswer] = []
-    private var correctAnswersCount = 0
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let selectedTopic = selectedTopic {
-            topicLabel.text = selectedTopic.rawValue
-            questions = Question.getQuestions(forTopic: selectedTopic)
-        }
+//        if let selectedTopic = selectedTopic {
+        topicLabel.text = "Тема: \(selectedTopic.rawValue)"
+        questions = Question.getQuestions(forTopic: selectedTopic)
         updateUI()
     }
     
+    // MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let resultsViewController = segue.destination as! ResultsViewController
-        resultsViewController.correctAnswersCount = correctAnswersCount
-        resultsViewController.totalQuestionsCount = questions.count
-        resultsViewController.userWrongAnswers = userWrongAnswers
+        guard let resultsVC = segue.destination as? ResultsViewController else { return }
+        resultsVC.totalQuestionsCount = questions.count
+        resultsVC.wrongAnswers = wrongAnswers
+        resultsVC.questionsWithMistakes = questionsWithMistakes
     }
-    // MARK: - UI Updates
-    private func updateUI() {
-        title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
-        topicLabel.text = currentQuestion.topic.rawValue
-        questionLabel.text = currentQuestion.text
-        let totalProgress = Float(questionIndex) / Float(questions.count)
-        questionProgressView.setProgress(totalProgress, animated: true)
-        
-        for (buttonIndex, button) in answerButtons.enumerated() {
-            if buttonIndex < currentQuestion.options.count {
-                button.setTitle(currentQuestion.options[buttonIndex], for: .normal)
-                button.isHidden = false
-            } else {
-                button.isHidden = true
-            }
-        }
-    }
+    
     // MARK: - Actions
     @IBAction func answerButtonTapped(_ sender: UIButton) {
         guard let selectedIndex = answerButtons.firstIndex(of: sender) else { return }
-        
-        selectedAnswers.append(selectedIndex)
-        if selectedIndex == currentQuestion.correctAnswerIndex {
-            correctAnswersCount += 1
-        } else {
-            let userAnswer = UserAnswer(question: currentQuestion, answerIndex: selectedIndex)
-            userWrongAnswers.append(userAnswer)
+        let currentAnswer = currentQuestion.answers[selectedIndex]
+        if currentAnswer.type == .wrong {
+            questionsWithMistakes.append(currentQuestion)
+            wrongAnswers.append(currentAnswer)
         }
         
         questionIndex += 1
@@ -77,6 +61,23 @@ final class QuizViewController: UIViewController {
             performSegue(withIdentifier: "showResults", sender: nil)
         }
     }
+    
+    // MARK: - Private Methods
+    private func updateUI() {
+        title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
+        topicLabel.text = "Тема: \(currentQuestion.topic.rawValue)"
+        questionLabel.text = currentQuestion.text
+        let totalProgress = Float(questionIndex) / Float(questions.count)
+        questionProgressView.setProgress(totalProgress, animated: true)
+        
+        for (buttonIndex, button) in answerButtons.enumerated() {
+            if buttonIndex < currentQuestion.answers.count {
+                button.setTitle(currentQuestion.answers[buttonIndex].answer, for: .normal)
+                button.titleLabel?.textAlignment = .center
+                button.isHidden = false
+            } else {
+                button.isHidden = true
+            }
+        }
+    }
 }
-
-

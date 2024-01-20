@@ -221,8 +221,7 @@
                                             <color key="baseBackgroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="topicButtonTapped:" destination="G3t-NA-Cio" eventType="touchUpInside" id="pC6-b8-WIv"/>
-                                            <segue destination="FzA-u2-ilp" kind="presentation" identifier="showQuiz" modalPresentationStyle="fullScreen" id="6eY-qq-u90"/>
+                                            <segue destination="FzA-u2-ilp" kind="presentation" modalPresentationStyle="fullScreen" id="oIs-JF-48c"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -244,7 +243,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contentTextLabel" destination="rFL-8X-tZR" id="Dy9-qg-9cy"/>
-                        <outlet property="startButton" destination="9uW-je-NcC" id="Asl-tD-4vE"/>
                         <outlet property="topicLabel" destination="Yzp-IH-miF" id="pk2-YB-FPI"/>
                         <outlet property="topicNumberLabel" destination="wjF-mV-ttH" id="V90-Xs-xuL"/>
                     </connections>
@@ -256,7 +254,9 @@
         <!--QuizStoryboard-->
         <scene sceneID="rNr-ly-adI">
             <objects>
-                <viewControllerPlaceholder storyboardName="QuizStoryboard" id="FzA-u2-ilp" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="QuizStoryboard" id="FzA-u2-ilp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ucW-1L-8ys"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2U4-Aw-unP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3021" y="-529"/>
