@@ -17,14 +17,14 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="R0n-Ey-v4x">
                                 <rect key="frame" x="110" y="220.5" width="100" height="98.5"/>
-                                <color key="tintColor" red="1" green="0.85882352939999995" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="R0n-Ey-v4x" secondAttribute="height" multiplier="1:1" id="6wm-li-Yzh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.50980392156862742" green="0.22352941176470587" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="R0n-Ey-v4x" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="85k-Uo-d9D"/>
                             <constraint firstItem="R0n-Ey-v4x" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.176056" id="iIs-SM-kma"/>

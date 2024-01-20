@@ -16,33 +16,27 @@ struct Developer {
             Developer(
                 name: "Антон",
                 role: .teamLead,
-                developedQuiz: "Самый могучий, собрал несобираемое",
+                developedQuiz: "Самый могучий, сделал невозможное - собрал несобираемое",
                 photo: "antonPhoto"
             ),
             Developer(
                 name: "Варя",
                 role: .developer,
-                developedQuiz: "Фея экранов. Создала этот экран и экран с опросами",
+                developedQuiz: "Фея экранов и не только. Продумала не только дизайн, но и логику этого экрана",
                 photo: "varyaPhoto"
             ),
             Developer(
                 name: "Костя",
                 role: .developer,
-                developedQuiz: "Чародей DataSource. Все вопросики его заслуга",
+                developedQuiz: "Чародей DataSource и логики ViewController. Все вопросики его заслуга",
                 photo: "personPhoto"
             ),
             Developer(
                 name: "Саша",
                 role: .developer,
-                developedQuiz: "Волшебник TableView, создал экран со списком тем и эран описания",
+                developedQuiz: "Волшебник TableView, создал экран со списком тем и эран с ошибками",
                 photo: "sashaPhoto"
-            ),
-            Developer(
-                name: "Максим",
-                role: .developer,
-                developedQuiz: "Маг логики, вся подковерная игра квиза создана им",
-                photo: "personPhoto"
-            ),
+            )
             ]
         
         return team
@@ -51,5 +45,5 @@ struct Developer {
 
 enum Role: String {
     case teamLead = "Teamlead"
-    case developer = "Developer"
+    case developer = "Developers"
 }

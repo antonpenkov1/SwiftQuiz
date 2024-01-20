@@ -9,25 +9,27 @@ import UIKit
 
 final class TopicDetailsViewController: UIViewController {
 
-    @IBOutlet weak var contentTextView: UITextView!
-    @IBOutlet weak var startButton: UIButton!
-
+    @IBOutlet var topicNumberLabel: UILabel!
+    @IBOutlet var topicLabel: UILabel!
+    @IBOutlet weak var contentTextLabel: UILabel!
+    
     var topic: Topic!
+    var topicNumber: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentTextView.text = topic.content
+        contentTextLabel.text = topic.content
+        topicLabel.text = topic.name.rawValue
+        topicNumberLabel.text = topicNumber.formatted()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let navigationController = segue.destination as? UINavigationController else { return }
+        let destinationVC = navigationController.topViewController as? QuizViewController
+        destinationVC?.selectedTopic = topic.name
     }
-    */
-
+    
+    @IBAction func backButtonAction() {
+        dismiss(animated: true)
+    }
 }
