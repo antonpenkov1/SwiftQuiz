@@ -22,7 +22,7 @@ struct Developer {
             Developer(
                 name: "Варя",
                 role: .developer,
-                developedQuiz: "Фея экранов. Создала этот экран и экран с опросами",
+                developedQuiz: "Фея экранов и не только. Продумала не только дизайн, но и логику этого экрана",
                 photo: "varyaPhoto"
             ),
             Developer(
@@ -34,7 +34,7 @@ struct Developer {
             Developer(
                 name: "Саша",
                 role: .developer,
-                developedQuiz: "Волшебник TableView, создал экран со списком тем и эран описания",
+                developedQuiz: "Волшебник TableView, создал экран со списком тем и эран с ошибками",
                 photo: "sashaPhoto"
             )
             ]

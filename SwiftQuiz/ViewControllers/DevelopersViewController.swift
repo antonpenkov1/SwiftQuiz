@@ -19,7 +19,7 @@ final class DevelopersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 80
+        tableView.rowHeight = 100
     }
     
     // MARK: - UITableViewDataSource
