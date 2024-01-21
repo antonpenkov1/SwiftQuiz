@@ -86,7 +86,14 @@ final class DevelopersViewController: UITableViewController {
         role = section == 0 ? .teamLead : .developer
         headerLabel.text = role.rawValue
         headerLabel.textColor = UIColor(white: 1, alpha: 0.95)
+        
         contentView.addSubview(headerLabel)
+        contentView.backgroundColor = UIColor(
+            red: 0.54,
+            green: 0.47,
+            blue: 0.91,
+            alpha: 1
+        )
         
         return contentView
     }
