@@ -81,8 +81,8 @@
 		D2C58E482B51BEFB00B0156F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				D2F88FAB2B50577D00303D0A /* Main.storyboard */,
 				D2F88FB02B50577E00303D0A /* LaunchScreen.storyboard */,
+				D2F88FAB2B50577D00303D0A /* Main.storyboard */,
 				48BB85F22B52AC900040527B /* QuizStoryboard.storyboard */,
 				D24828262B55B79A000644B7 /* AnswersTableView.storyboard */,
 			);
@@ -186,7 +186,6 @@
 			files = (
 				D24828272B55B79A000644B7 /* AnswersTableView.storyboard in Resources */,
 				D2F88FB22B50577E00303D0A /* LaunchScreen.storyboard in Resources */,
-				A14221A52B56C61A00A6A66A /* TopicsStoryboard.storyboard in Resources */,
 				D2F88FAF2B50577E00303D0A /* Assets.xcassets in Resources */,
 				48BB85F32B52AC900040527B /* QuizStoryboard.storyboard in Resources */,
 				D2F88FAD2B50577D00303D0A /* Main.storyboard in Resources */,
@@ -210,7 +209,6 @@
 				D23313D92B5834D800A6CD18 /* TopicListViewController.swift in Sources */,
 				D23313DB2B5834DC00A6CD18 /* TopicDetailsViewController.swift in Sources */,
 				D2C58E4B2B51C43500B0156F /* DevelopersViewController.swift in Sources */,
-				A14221A92B56F6D700A6A66A /* Topic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

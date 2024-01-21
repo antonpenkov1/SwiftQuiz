@@ -55,7 +55,7 @@ extension TopicListViewController {
 // MARK: - UITableViewDelegate
 extension TopicListViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let contentView = UIView()
+        let content = UIView()
         
         let headerLabel = UILabel(
             frame: CGRect(
@@ -68,15 +68,15 @@ extension TopicListViewController {
         headerLabel.text = "Основы программирования на Swift"
         headerLabel.textColor = UIColor(white: 1, alpha: 0.95)
         
-        contentView.addSubview(headerLabel)
-        contentView.backgroundColor = UIColor(
+        content.addSubview(headerLabel)
+        content.backgroundColor = UIColor(
             red: 0.54,
             green: 0.47,
             blue: 0.91,
             alpha: 1
         )
         
-        return contentView
+        return content
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

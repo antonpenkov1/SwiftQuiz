@@ -22,22 +22,22 @@
                                 </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тема:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-EO-XUX">
-                                <rect key="frame" x="16" y="121" width="288" height="11"/>
+                                <rect key="frame" x="16" y="129" width="288" height="16.5"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
                                 <color key="textColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="MSH-Bw-gQQ">
-                                <rect key="frame" x="16" y="140" width="288" height="420"/>
+                                <rect key="frame" x="16" y="153.5" width="288" height="406.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZy-uD-35l">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="136.5"/>
                                         <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="25"/>
                                         <color key="textColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zKP-u9-I82">
-                                        <rect key="frame" x="0.0" y="172" width="288" height="248"/>
+                                        <rect key="frame" x="0.0" y="158.5" width="288" height="248"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94s-Ul-2UF">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
@@ -103,14 +103,14 @@
                         <viewLayoutGuide key="safeArea" id="E1h-II-URD"/>
                         <color key="backgroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fZy-uD-35l" firstAttribute="height" secondItem="2MX-sy-Paf" secondAttribute="height" multiplier="0.264085" id="08P-wp-A71"/>
+                            <constraint firstItem="fZy-uD-35l" firstAttribute="height" secondItem="2MX-sy-Paf" secondAttribute="height" multiplier="0.24" id="08P-wp-A71"/>
                             <constraint firstItem="mQc-qn-mb4" firstAttribute="trailing" secondItem="E1h-II-URD" secondAttribute="trailing" id="3T3-rq-pgx"/>
                             <constraint firstItem="MSH-Bw-gQQ" firstAttribute="top" secondItem="eRu-EO-XUX" secondAttribute="bottom" constant="8" id="5p9-Ys-a6y"/>
                             <constraint firstItem="eRu-EO-XUX" firstAttribute="leading" secondItem="E1h-II-URD" secondAttribute="leading" constant="16" id="6tu-Ph-IwC"/>
                             <constraint firstItem="MSH-Bw-gQQ" firstAttribute="leading" secondItem="E1h-II-URD" secondAttribute="leading" constant="16" id="Bdb-8t-5yw"/>
                             <constraint firstItem="E1h-II-URD" firstAttribute="trailing" secondItem="eRu-EO-XUX" secondAttribute="trailing" constant="16" id="EyS-Q2-G1r"/>
                             <constraint firstItem="mQc-qn-mb4" firstAttribute="leading" secondItem="E1h-II-URD" secondAttribute="leading" id="RKc-Ui-b0X"/>
-                            <constraint firstItem="eRu-EO-XUX" firstAttribute="top" secondItem="mQc-qn-mb4" secondAttribute="bottom" id="Yu3-jG-aCm"/>
+                            <constraint firstItem="eRu-EO-XUX" firstAttribute="top" secondItem="mQc-qn-mb4" secondAttribute="bottom" constant="8" id="Yu3-jG-aCm"/>
                             <constraint firstItem="E1h-II-URD" firstAttribute="bottom" secondItem="MSH-Bw-gQQ" secondAttribute="bottom" constant="8" id="n9Q-ui-uxO"/>
                             <constraint firstItem="mQc-qn-mb4" firstAttribute="top" secondItem="E1h-II-URD" secondAttribute="top" id="qL1-o7-c1j"/>
                             <constraint firstItem="E1h-II-URD" firstAttribute="trailing" secondItem="MSH-Bw-gQQ" secondAttribute="trailing" constant="16" id="tAQ-TW-vs7"/>
