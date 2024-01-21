@@ -122,7 +122,7 @@ struct Question {
             Question(
                 text: "Какой оператор используется для нахождения остатка от деления в Swift?",
                 answers: [
-                    Answer(answer: "%", type: .wrong),
+                    Answer(answer: "%", type: .correct),
                     Answer(answer: "*", type: .wrong),
                     Answer(answer: "-", type: .wrong),
                     Answer(answer: "/", type: .wrong)
