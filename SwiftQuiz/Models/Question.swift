@@ -360,8 +360,191 @@ struct Question {
                     Answer(answer: "Она удаляет дубликаты из массива", type: .wrong)
                 ].shuffled(),
                 topic: .superFunc
-            )
+            ),
+            //Классы и объекты
+            Question(
+                text: "В классе нужно инкапсулировать:",
+                answers: [
+                    Answer(answer: "Методы и свойства для реализации внутренней логики класса", type: .correct),
+                    Answer(answer: "Все методы и свойства", type: .wrong),
+                ].shuffled(),
+                topic: .classesAndObjects
+            ),
+            Question(
+                text: "Сокрытие информации можно также назвать как",
+                answers: [
+                    Answer(answer: "Инкапсуляция", type: .correct),
+                    Answer(answer: "Полиморфизм", type: .wrong),
+                    Answer(answer: "Наследование", type: .wrong),
+                    Answer(answer: "Деинициализация", type: .wrong)
+                ].shuffled(),
+                topic: .classesAndObjects
+            ),
+            Question(
+                text: "Что такое экземпляр класса?",
+                answers: [
+                    Answer(answer: "Объект, находящийся в памяти устройства", type: .wrong),
+                    Answer(answer: "Шаблон на основе которого создаются объекты класса", type: .wrong),
+                    Answer(answer: "Ссылка на область в памяти устройства, в которой хранится объект класса", type: .correct)
+                ].shuffled(),
+                topic: .classesAndObjects
+            ),
+            Question(
+                text: "Как инкапсулировать методы и свойства класса?",
+                answers: [
+                    Answer(answer: "Пометить их ключевым словом fileprivate", type: .wrong),
+                    Answer(answer: "Поместить их в отдельное расширение для класса", type: .wrong),
+                    Answer(answer: "Пометить их ключевым словом private", type: .correct)
+                ].shuffled(),
+                topic: .classesAndObjects
+            ),
+            Question(
+                text: "Могут ли разные экземпляры класса ссылаться на один и тот же объект?",
+                answers: [
+                    Answer(answer: "Нет", type: .wrong),
+                    Answer(answer: "Да", type: .correct)
+                ].shuffled(),
+                topic: .classesAndObjects
+            ),
+            //Структуры
+            Question(
+                text: "Чем является экземпляр структуры?",
+                answers: [
+                    Answer(answer: "Ссылкой на объект", type: .wrong),
+                    Answer(answer: "Объектом", type: .correct)
+                ].shuffled(),
+                topic: .structures
+            ),
+            Question(
+                text: "Может ли класс наследоваться сразу от нескольких классов?",
+                answers: [
+                    Answer(answer: "Нет", type: .wrong),
+                    Answer(answer: "Да", type: .correct)
+                ].shuffled(),
+                topic: .structures
+            ),
+            Question(
+                text: "Когда в подклассе объявляется метод с таким же названием, параметрами и возвращаемым значением как и в одном из его родительских классов, это:",
+                answers: [
+                    Answer(answer: "Затенение метода", type: .wrong),
+                    Answer(answer: "Переопределение метода (Method overriding)", type: .correct),
+                    Answer(answer: "Так делать нельзя, возникнет ошибка", type: .wrong)
+                ].shuffled(),
+                topic: .structures
+            ),
+            Question(
+                text: "Верно ли утверждение: класс-наследник должен быть более абстрактным, чем класс-родитель?",
+                answers: [
+                    Answer(answer: "Да", type: .wrong),
+                    Answer(answer: "Нет, наследник должен конкретизировать суперкласс", type: .correct)
+                ].shuffled(),
+                topic: .structures
+            ),
+            Question(
+                text: "Как называется создание нового класса на базе существующего(базового) класса?",
+                answers: [
+                    Answer(answer: "Полиморфизм", type: .wrong),
+                    Answer(answer: "Наследование", type: .correct),
+                    Answer(answer: "Инкапсуляция", type: .wrong),
+                    Answer(answer: "Переопределение", type: .wrong)
+                ].shuffled(),
+                topic: .structures
+            ),
+            // Перечисления
+            Question(
+                text: "Что относится к ссылочным типам?",
+                answers: [
+                    Answer(answer: "Структуры", type: .wrong),
+                    Answer(answer: "Классы", type: .correct),
+                    Answer(answer: "Перечисления", type: .wrong)
+                ].shuffled(),
+                topic: .transfers
+            ),
+            Question(
+                text: "В каком стиле следует задавать названия для перечислений?",
+                answers: [
+                    Answer(answer: "UpperCamelCase", type: .correct),
+                    Answer(answer: "lowerCamelCase", type: .wrong),
+                    Answer(answer: "На свое усмотрение", type: .wrong)
+                ].shuffled(),
+                topic: .transfers
+            ),
+            Question(
+                text: "Все базовые типы в Swift являются:",
+                answers: [
+                    Answer(answer: "Классами", type: .wrong),
+                    Answer(answer: "Структурами", type: .correct),
+                    Answer(answer: "Перечислениями", type: .wrong)
+                ].shuffled(),
+                topic: .transfers
+            ),
+            Question(
+                text: "Каким ключевым словом обозначается перечисление?",
+                answers: [
+                    Answer(answer: "class", type: .wrong),
+                    Answer(answer: "enum", type: .correct),
+                    Answer(answer: "Enum", type: .wrong),
+                    Answer(answer: "enumeration", type: .wrong),
+                ].shuffled(),
+                topic: .transfers
+            ),
+            Question(
+                text: "Обязаны ли мы присваивать исходные значения кейсам?",
+                answers: [
+                    Answer(answer: "Да", type: .wrong),
+                    Answer(answer: "Нет", type: .correct)
+                ].shuffled(),
+                topic: .transfers
+            ),
+            // Дополнительные концепции Swift
+            Question(
+                text: "Можно ли объединять в кортежи свойства разных типов?",
+                answers: [
+                    Answer(answer: "Нет", type: .wrong),
+                    Answer(answer: "Да", type: .correct)
+                ].shuffled(),
+                topic: .additionalConcepts
+            ),
+            Question(
+                text: "Можно ли использовать опциональные константы и переменные, не проинициализировав их?",
+                answers: [
+                    Answer(answer: "Можно, но только переменные", type: .correct),
+                    Answer(answer: "Можно, но только константы", type: .wrong),
+                    Answer(answer: "Можно", type: .wrong),
+                    Answer(answer: "Нельзя", type: .wrong)
+                ].shuffled(),
+                topic: .additionalConcepts
+            ),
+            Question(
+                text: "К чему приводит принудительное извлечение, когда опционал имеет nil?",
+                answers: [
+                    Answer(answer: "К падению приложения", type: .correct),
+                    Answer(answer: "Получим nil", type: .wrong),
+                    Answer(answer: "К извлечению значения", type: .wrong)
+                ].shuffled(),
+                topic: .additionalConcepts
+            ),
+            Question(
+                text: "Какое значение имеет свойство: var optionalString",
+                answers: [
+                    Answer(answer: "Свойство не имеет значения", type: .correct),
+                    Answer(answer: "Пустую строку", type: .wrong),
+                    Answer(answer: "nil", type: .wrong)
+                ].shuffled(),
+                topic: .additionalConcepts
+            ),
+            Question(
+                text: "Какое значение имеет свойство: var optionalString?",
+                answers: [
+                    Answer(answer: "nil", type: .correct),
+                    Answer(answer: "Пустую строку", type: .wrong),
+                    Answer(answer: "Свойство не имеет значения", type: .wrong)
+                ].shuffled(),
+                topic: .additionalConcepts
+            ),
+            
         ].shuffled()
+
         return allQuestion.filter { $0.topic == topic}
     }
 }
@@ -424,12 +607,52 @@ struct Topic {
             Topic(
                 name: .superFunc,
                 content: """
-            Функции высшего порядка:
-            -sorted
-            -map
-            -flatMap 
-            и другие
-            """
+                Функции высшего порядка:
+                - sorted
+                - map
+                - flatMap
+               и другие
+               """
+            ),
+            Topic(
+                name: .classesAndObjects,
+                content: """
+                Классы и объекты:
+                - Общее понятие ООП
+                - Описание класса
+                - Публичные свойства и методы
+                - Инициализаторы
+                """
+            ),
+            Topic(
+                name: .structures,
+                content: """
+                Структуры:
+                - Наследование
+                - Полиморфизм
+                - Сравнение классов и структур
+                - Методы структур
+                """
+            ),
+            Topic(
+                name: .transfers,
+                content: """
+                Перечисления:
+                - Синтаксис перечислений
+                - Возможность перечислений
+                - Исходные значения кейсов перечислений
+                - Инициализация
+                """
+            ),
+            Topic(
+                name: .additionalConcepts,
+                content: """
+                Дополнительные концепции Swift:
+                - Кортежи
+                - Извлечение опциональных типов
+                - Опциональная привязка
+                - Оператор Guard
+                """
             )
         ]
     }
@@ -437,7 +660,7 @@ struct Topic {
 
 struct Answer {
     let answer: String
-    let type: ResponseType
+    var type: ResponseType
 }
 
 enum TopicName: String {
@@ -447,6 +670,10 @@ enum TopicName: String {
     case collectionTypes = "Типы коллекций"
     case functions = "Функции"
     case superFunc = "Функции высшего порядка"
+    case classesAndObjects = "Классы и объекты"
+    case structures = "Структуры"
+    case transfers = "Перечисления"
+    case additionalConcepts = "Дополнительные концепции"
 }
 
 enum ResponseType {
