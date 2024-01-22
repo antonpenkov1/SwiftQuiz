@@ -8,20 +8,23 @@
 import UIKit
 
 final class ResultsViewController: UIViewController {
-    
+    // MARK: - IB Outlets
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var shortResultLabel: UILabel!
     @IBOutlet var errorButton: UIButton!
     @IBOutlet var resultImage: UIImageView!
     
+    // MARK: - Public Properties
     var wrongAnswers: [Answer]!
     var questionsWithMistakes: [Question]!
     var totalQuestionsCount: Int!
     
+    // MARK: - Private Properties
     private var correctAnswerscount: Int {
         totalQuestionsCount - wrongAnswers.count
     }
     
+    // MARK: - Lifecycle and Navigation
     override func viewDidLoad() {
         super.viewDidLoad()
         shortResultLabel.text = """
@@ -40,6 +43,7 @@ final class ResultsViewController: UIViewController {
         answersVC?.questionsWithMistakes =  questionsWithMistakes
     }
     
+    // MARK: - Private Methods
     private func updateResultImage() {
         let successThreshold = 0.8
         let successRate = Double(correctAnswerscount) / Double(totalQuestionsCount)

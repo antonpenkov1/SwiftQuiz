@@ -58,7 +58,6 @@ extension TopicListViewController {
         )
         headerLabel.text = "Основы программирования на Swift"
         headerLabel.textColor = UIColor(white: 1, alpha: 0.95)
-        
         content.addSubview(headerLabel)
         content.backgroundColor = UIColor(
             red: 0.54,
@@ -72,6 +71,5 @@ extension TopicListViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         30
-    }
-    
+    }    
 }

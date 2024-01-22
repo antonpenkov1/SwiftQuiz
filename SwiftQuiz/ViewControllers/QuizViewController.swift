@@ -12,7 +12,6 @@ final class QuizViewController: UIViewController {
     @IBOutlet var topicLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionProgressView: UIProgressView!
-    
     @IBOutlet var answerButtons: [UIButton]!
     
     // MARK: - Public Properties

@@ -12,11 +12,12 @@ final class DevelopersViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.rowHeight = 100
     }
+}
     
-    // MARK: - UITableViewDataSource
+// MARK: - UITableViewDataSource
+extension DevelopersViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         let typesOfSections = Set(team.map {$0.role})
         return typesOfSections.count
@@ -65,8 +66,10 @@ final class DevelopersViewController: UITableViewController {
         
         return cell
     }
-    
-    // MARK: - UITableViewDelegate
+}
+
+// MARK: - UITableViewDelegate
+extension DevelopersViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -86,7 +89,6 @@ final class DevelopersViewController: UITableViewController {
         role = section == 0 ? .teamLead : .developer
         headerLabel.text = role.rawValue
         headerLabel.textColor = UIColor(white: 1, alpha: 0.95)
-        
         content.addSubview(headerLabel)
         content.backgroundColor = UIColor(
             red: 0.54,
