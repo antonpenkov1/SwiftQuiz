@@ -29,7 +29,7 @@ struct Developer {
                 name: "Костя",
                 role: .developer,
                 developedQuiz: "Чародей DataSource и логики ViewController. Все вопросики его заслуга",
-                photo: "personPhoto"
+                photo: "kostyaPhoto"
             ),
             Developer(
                 name: "Саша",
