@@ -22,98 +22,95 @@
                                 </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тема:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-EO-XUX">
-                                <rect key="frame" x="16" y="121" width="288" height="11"/>
+                                <rect key="frame" x="16" y="129" width="288" height="21"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
                                 <color key="textColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="MSH-Bw-gQQ">
-                                <rect key="frame" x="16" y="140" width="288" height="420"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZy-uD-35l">
+                                <rect key="frame" x="16" y="158" width="288" height="146"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="25"/>
+                                <color key="textColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zKP-u9-I82">
+                                <rect key="frame" x="16" y="312" width="288" height="248"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZy-uD-35l">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="150"/>
-                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="25"/>
-                                        <color key="textColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zKP-u9-I82">
-                                        <rect key="frame" x="0.0" y="172" width="288" height="248"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94s-Ul-2UF">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="llh-M9-6h8"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large" titleAlignment="leading">
-                                                    <fontDescription key="titleFontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
-                                                    <color key="baseForegroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="2Yk-LG-Gca"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp7-rR-zhU">
-                                                <rect key="frame" x="0.0" y="66" width="288" height="50"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large" titleAlignment="leading">
-                                                    <fontDescription key="titleFontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
-                                                    <color key="baseForegroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="y34-Ic-ycC"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU9-kY-ePb">
-                                                <rect key="frame" x="0.0" y="132" width="288" height="50"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large" titleAlignment="leading">
-                                                    <fontDescription key="titleFontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
-                                                    <color key="baseForegroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="C7D-IY-ljh"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNZ-S1-1hB">
-                                                <rect key="frame" x="0.0" y="198" width="288" height="50"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large" titleAlignment="leading">
-                                                    <fontDescription key="titleFontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
-                                                    <color key="baseForegroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="kYW-XD-3Nc"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94s-Ul-2UF">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
                                         <constraints>
-                                            <constraint firstItem="VNZ-S1-1hB" firstAttribute="height" secondItem="94s-Ul-2UF" secondAttribute="height" id="0dI-Pd-HHi"/>
-                                            <constraint firstItem="KU9-kY-ePb" firstAttribute="height" secondItem="94s-Ul-2UF" secondAttribute="height" id="2J2-q8-J2G"/>
-                                            <constraint firstItem="Vp7-rR-zhU" firstAttribute="height" secondItem="94s-Ul-2UF" secondAttribute="height" id="eD4-QP-XOQ"/>
+                                            <constraint firstAttribute="height" constant="50" id="llh-M9-6h8"/>
                                         </constraints>
-                                    </stackView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large" titleAlignment="leading">
+                                            <fontDescription key="titleFontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="2Yk-LG-Gca"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp7-rR-zhU">
+                                        <rect key="frame" x="0.0" y="66" width="288" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large" titleAlignment="leading">
+                                            <fontDescription key="titleFontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="y34-Ic-ycC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU9-kY-ePb">
+                                        <rect key="frame" x="0.0" y="132" width="288" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large" titleAlignment="leading">
+                                            <fontDescription key="titleFontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="C7D-IY-ljh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNZ-S1-1hB">
+                                        <rect key="frame" x="0.0" y="198" width="288" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large" titleAlignment="leading">
+                                            <fontDescription key="titleFontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.54003965854644775" green="0.47614681720733643" blue="0.90561801195144653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="nhT-gS-msO" eventType="touchUpInside" id="kYW-XD-3Nc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="VNZ-S1-1hB" firstAttribute="height" secondItem="94s-Ul-2UF" secondAttribute="height" id="0dI-Pd-HHi"/>
+                                    <constraint firstItem="KU9-kY-ePb" firstAttribute="height" secondItem="94s-Ul-2UF" secondAttribute="height" id="2J2-q8-J2G"/>
+                                    <constraint firstItem="Vp7-rR-zhU" firstAttribute="height" secondItem="94s-Ul-2UF" secondAttribute="height" id="eD4-QP-XOQ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E1h-II-URD"/>
                         <color key="backgroundColor" white="0.96494306139999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fZy-uD-35l" firstAttribute="height" secondItem="2MX-sy-Paf" secondAttribute="height" multiplier="0.264085" id="08P-wp-A71"/>
                             <constraint firstItem="mQc-qn-mb4" firstAttribute="trailing" secondItem="E1h-II-URD" secondAttribute="trailing" id="3T3-rq-pgx"/>
-                            <constraint firstItem="MSH-Bw-gQQ" firstAttribute="top" secondItem="eRu-EO-XUX" secondAttribute="bottom" constant="8" id="5p9-Ys-a6y"/>
                             <constraint firstItem="eRu-EO-XUX" firstAttribute="leading" secondItem="E1h-II-URD" secondAttribute="leading" constant="16" id="6tu-Ph-IwC"/>
-                            <constraint firstItem="MSH-Bw-gQQ" firstAttribute="leading" secondItem="E1h-II-URD" secondAttribute="leading" constant="16" id="Bdb-8t-5yw"/>
+                            <constraint firstItem="E1h-II-URD" firstAttribute="trailing" secondItem="zKP-u9-I82" secondAttribute="trailing" constant="16" id="99S-Cf-0wq"/>
+                            <constraint firstItem="fZy-uD-35l" firstAttribute="top" secondItem="eRu-EO-XUX" secondAttribute="bottom" constant="8" id="De4-EC-DMN"/>
                             <constraint firstItem="E1h-II-URD" firstAttribute="trailing" secondItem="eRu-EO-XUX" secondAttribute="trailing" constant="16" id="EyS-Q2-G1r"/>
                             <constraint firstItem="mQc-qn-mb4" firstAttribute="leading" secondItem="E1h-II-URD" secondAttribute="leading" id="RKc-Ui-b0X"/>
-                            <constraint firstItem="eRu-EO-XUX" firstAttribute="top" secondItem="mQc-qn-mb4" secondAttribute="bottom" id="Yu3-jG-aCm"/>
-                            <constraint firstItem="E1h-II-URD" firstAttribute="bottom" secondItem="MSH-Bw-gQQ" secondAttribute="bottom" constant="8" id="n9Q-ui-uxO"/>
+                            <constraint firstItem="E1h-II-URD" firstAttribute="trailing" secondItem="fZy-uD-35l" secondAttribute="trailing" constant="16" id="SN0-xw-hhM"/>
+                            <constraint firstItem="eRu-EO-XUX" firstAttribute="top" secondItem="mQc-qn-mb4" secondAttribute="bottom" constant="8" id="Yu3-jG-aCm"/>
+                            <constraint firstItem="E1h-II-URD" firstAttribute="bottom" secondItem="zKP-u9-I82" secondAttribute="bottom" constant="8" id="fb8-nV-Idw"/>
+                            <constraint firstItem="zKP-u9-I82" firstAttribute="top" secondItem="fZy-uD-35l" secondAttribute="bottom" constant="8" id="p2S-yK-o8H"/>
                             <constraint firstItem="mQc-qn-mb4" firstAttribute="top" secondItem="E1h-II-URD" secondAttribute="top" id="qL1-o7-c1j"/>
-                            <constraint firstItem="E1h-II-URD" firstAttribute="trailing" secondItem="MSH-Bw-gQQ" secondAttribute="trailing" constant="16" id="tAQ-TW-vs7"/>
+                            <constraint firstItem="zKP-u9-I82" firstAttribute="leading" secondItem="E1h-II-URD" secondAttribute="leading" constant="16" id="rBQ-dg-VLH"/>
+                            <constraint firstItem="fZy-uD-35l" firstAttribute="leading" secondItem="E1h-II-URD" secondAttribute="leading" constant="16" id="wQ4-Jy-zY6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="aGU-wF-r1L"/>
@@ -123,8 +120,8 @@
                         <outlet property="topicLabel" destination="eRu-EO-XUX" id="9D3-9d-DnO"/>
                         <outletCollection property="answerButtons" destination="94s-Ul-2UF" collectionClass="NSMutableArray" id="sOV-Wi-D62"/>
                         <outletCollection property="answerButtons" destination="Vp7-rR-zhU" collectionClass="NSMutableArray" id="iFZ-8G-MIc"/>
-                        <outletCollection property="answerButtons" destination="KU9-kY-ePb" collectionClass="NSMutableArray" id="1UY-Ka-xid"/>
                         <outletCollection property="answerButtons" destination="VNZ-S1-1hB" collectionClass="NSMutableArray" id="hpO-s8-QJe"/>
+                        <outletCollection property="answerButtons" destination="KU9-kY-ePb" collectionClass="NSMutableArray" id="1UY-Ka-xid"/>
                         <segue destination="JUk-61-EUK" kind="presentation" identifier="showResults" modalPresentationStyle="fullScreen" id="xIP-b3-xEd"/>
                     </connections>
                 </viewController>

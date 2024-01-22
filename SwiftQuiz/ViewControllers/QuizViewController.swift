@@ -12,7 +12,6 @@ final class QuizViewController: UIViewController {
     @IBOutlet var topicLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionProgressView: UIProgressView!
-    
     @IBOutlet var answerButtons: [UIButton]!
     
     // MARK: - Public Properties
@@ -31,9 +30,8 @@ final class QuizViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let selectedTopic = selectedTopic {
         topicLabel.text = "Тема: \(selectedTopic.rawValue)"
-        questions = Question.getQuestions(forTopic: selectedTopic)
+        questions = DataStore.shared.allQuestion.filter { $0.topic ==  selectedTopic }
         updateUI()
     }
     

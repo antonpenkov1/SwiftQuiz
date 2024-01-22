@@ -8,15 +8,17 @@
 import UIKit
 
 final class DevelopersViewController: UITableViewController {
-    private let team = Developer.getDevelopers()
+    
+    private var team = DataStore.shared.team
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.rowHeight = 100
     }
+}
     
-    // MARK: - UITableViewDataSource
+// MARK: - UITableViewDataSource
+extension DevelopersViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         let typesOfSections = Set(team.map {$0.role})
         return typesOfSections.count
@@ -56,23 +58,27 @@ final class DevelopersViewController: UITableViewController {
         content.text = person.name
         content.textProperties.color = UIColor(white: 1, alpha: 0.95)
         content.textProperties.font = UIFont(name: "KohinoorBangla-Semibold", size: 20) ?? .systemFont(ofSize: 20)
+        
         content.secondaryText = person.developedQuiz
         content.secondaryTextProperties.color = UIColor(white: 1, alpha: 0.95)
         content.secondaryTextProperties.font = UIFont(name: "KohinoorBangla-Semibold", size: 14) ?? .systemFont(ofSize: 14)
+        
         content.image = UIImage(named: person.photo)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = content
         
         return cell
     }
-    
-    // MARK: - UITableViewDelegate
+}
+
+// MARK: - UITableViewDelegate
+extension DevelopersViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let contentView = UIView()
+        let content = UIView()
         
         let headerLabel = UILabel(
             frame: CGRect(
@@ -86,9 +92,15 @@ final class DevelopersViewController: UITableViewController {
         role = section == 0 ? .teamLead : .developer
         headerLabel.text = role.rawValue
         headerLabel.textColor = UIColor(white: 1, alpha: 0.95)
-        contentView.addSubview(headerLabel)
+        content.addSubview(headerLabel)
+        content.backgroundColor = UIColor(
+            red: 0.54,
+            green: 0.47,
+            blue: 0.91,
+            alpha: 1
+        )
         
-        return contentView
+        return content
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

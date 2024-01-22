@@ -8,18 +8,14 @@
 import UIKit
 
 final class TopicListViewController: UITableViewController {
-    private let topicList = Topic.getTopics()
+    
+    private let topicList = DataStore.shared.allTopics
     private var cellTextColor = UIColor(
         red: 246 / 255,
         green: 246 / 255,
         blue: 246 / 255,
         alpha: 1
     )
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,10 +28,6 @@ final class TopicListViewController: UITableViewController {
 
 // MARK: - UITableViewDataSource
 extension TopicListViewController {
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        "Основы программирования на Swift"
-//    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         topicList.count
     }
@@ -55,7 +47,7 @@ extension TopicListViewController {
 // MARK: - UITableViewDelegate
 extension TopicListViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let contentView = UIView()
+        let content = UIView()
         
         let headerLabel = UILabel(
             frame: CGRect(
@@ -67,13 +59,18 @@ extension TopicListViewController {
         )
         headerLabel.text = "Основы программирования на Swift"
         headerLabel.textColor = UIColor(white: 1, alpha: 0.95)
-        contentView.addSubview(headerLabel)
+        content.addSubview(headerLabel)
+        content.backgroundColor = UIColor(
+            red: 0.54,
+            green: 0.47,
+            blue: 0.91,
+            alpha: 1
+        )
         
-        return contentView
+        return content
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         30
-    }
-    
+    }    
 }
