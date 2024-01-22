@@ -58,9 +58,11 @@ extension DevelopersViewController {
         content.text = person.name
         content.textProperties.color = UIColor(white: 1, alpha: 0.95)
         content.textProperties.font = UIFont(name: "KohinoorBangla-Semibold", size: 20) ?? .systemFont(ofSize: 20)
+        
         content.secondaryText = person.developedQuiz
         content.secondaryTextProperties.color = UIColor(white: 1, alpha: 0.95)
         content.secondaryTextProperties.font = UIFont(name: "KohinoorBangla-Semibold", size: 14) ?? .systemFont(ofSize: 14)
+        
         content.image = UIImage(named: person.photo)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = content
