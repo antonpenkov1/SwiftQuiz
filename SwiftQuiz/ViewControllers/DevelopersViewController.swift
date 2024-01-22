@@ -8,7 +8,7 @@
 import UIKit
 
 final class DevelopersViewController: UITableViewController {
-    private var team = DataSource.shared.team
+    private var team = DataStore.shared.team
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -31,7 +31,7 @@ final class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         topicLabel.text = "Тема: \(selectedTopic.rawValue)"
-        questions = DataSource.shared.allQuestion.filter { $0.topic ==  selectedTopic }
+        questions = DataStore.shared.allQuestion.filter { $0.topic ==  selectedTopic }
         updateUI()
     }
     

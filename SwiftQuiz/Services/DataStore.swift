@@ -7,8 +7,8 @@
 
 import UIKit
 
-class DataSource {
-    static let shared = DataSource()
+class DataStore {
+    static let shared = DataStore()
     
     let team: [Developer] = [
         Developer(
