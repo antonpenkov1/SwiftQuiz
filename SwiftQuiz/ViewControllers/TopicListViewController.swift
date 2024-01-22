@@ -8,7 +8,7 @@
 import UIKit
 
 final class TopicListViewController: UITableViewController {
-    private let topicList = Topic.getTopics()
+    private let topicList = DataSource.shared.allTopics
     private var cellTextColor = UIColor(
         red: 246 / 255,
         green: 246 / 255,
