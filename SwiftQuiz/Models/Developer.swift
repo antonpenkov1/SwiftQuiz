@@ -37,7 +37,7 @@ struct Developer {
                 developedQuiz: "Волшебник TableView, создал экран со списком тем и эран с ошибками",
                 photo: "sashaPhoto"
             )
-            ]
+        ]
         
         return team
     }
