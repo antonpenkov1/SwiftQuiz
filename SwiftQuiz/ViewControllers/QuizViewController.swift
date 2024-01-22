@@ -31,7 +31,6 @@ final class QuizViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let selectedTopic = selectedTopic {
         topicLabel.text = "Тема: \(selectedTopic.rawValue)"
         questions = Question.getQuestions(forTopic: selectedTopic)
         updateUI()
