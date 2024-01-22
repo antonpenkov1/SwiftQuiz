@@ -385,7 +385,7 @@ struct Question {
                 answers: [
                     Answer(answer: "Объект, находящийся в памяти устройства", type: .wrong),
                     Answer(answer: "Шаблон на основе которого создаются объекты класса", type: .wrong),
-                    Answer(answer: "Ссылка на область в памяти устройства, в которой хранится объект класса", type: .correct)
+                    Answer(answer: "Ссылка на область в памяти устройства, где хранится объект класса", type: .correct)
                 ].shuffled(),
                 topic: .classesAndObjects
             ),

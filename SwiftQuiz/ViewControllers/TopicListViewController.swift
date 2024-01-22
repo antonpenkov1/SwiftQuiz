@@ -15,11 +15,6 @@ final class TopicListViewController: UITableViewController {
         blue: 246 / 255,
         alpha: 1
     )
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,10 +27,6 @@ final class TopicListViewController: UITableViewController {
 
 // MARK: - UITableViewDataSource
 extension TopicListViewController {
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        "Основы программирования на Swift"
-//    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         topicList.count
     }
