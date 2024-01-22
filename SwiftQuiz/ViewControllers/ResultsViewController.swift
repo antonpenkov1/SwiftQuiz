@@ -27,10 +27,11 @@ final class ResultsViewController: UIViewController {
     // MARK: - Lifecycle and Navigation
     override func viewDidLoad() {
         super.viewDidLoad()
-        shortResultLabel.text = """
-        Вы ответили правильно
-        на \(correctAnswerscount) из \(totalQuestionsCount ?? 0) вопросов
-        """
+        shortResultLabel.text =
+            """
+            Вы ответили правильно
+            на \(correctAnswerscount) из \(totalQuestionsCount ?? 0) вопросов
+            """
         navigationItem.hidesBackButton = true
         updateResultImage()
         errorButton.isHidden = (totalQuestionsCount == correctAnswerscount) ? true : false
